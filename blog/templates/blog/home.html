@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Photos (⁎⁍̴̛ᴗ⁍̴̛⁎)</h2>
+    <div class="grid-container">
+        {% for photo in photos %}
+            <div class="post">
+                <a href="{% url 'view_photo' photo.id %}"></a>
+                <img src="{{ photo.image.url }}">
+                <p>{{ photo.titre }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+
+
+    <h2>ʕ•ﻌ•ʔ----------------------------------------------------------------------------------------(◍•ᴗ•◍)------------------------------------------------------------------------------ฅ •ﻌ•♡</h2>
+    
+    <h2>Blog ( ง⁼̴̀ω⁼̴ )ง⁼³₌₃</h2>
+    <div class="grid-container">
+        {% for blog in blogs %}
+            <div class="post">
+                <a href="{% url 'view_blog' blog.id %}">
+                    <h4>Billet : {{ blog.title }}</h4>
+                    <img src="{{ blog.photo.image.url }}">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

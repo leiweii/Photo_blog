@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>{{ photo.caption }}</h2>
+    <img src="{{ photo.image.url }}">
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sauvegarder la légende</button>
+    </form>
+{% endblock content %}
