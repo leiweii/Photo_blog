@@ -27,8 +27,8 @@ class User(AbstractUser):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
         if self.role == self.CREATOR:
-            group = Group.objects.get(name='creators')
+            group = Group.objects.get(name='créateurs')
             group.user_set.add(self)
         elif self.role == self.SUBSCRIBER:
-            group = Group.objects.get(name='subscribers')
+            group = Group.objects.get(name='abonnés')
             group.user_set.add(self)

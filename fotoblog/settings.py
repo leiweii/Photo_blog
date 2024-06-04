@@ -152,3 +152,4 @@ MEDIA_ROOT = BASE_DIR.joinpath('media/')
 # Le deuxième paramètre à configurer est  MEDIA_ROOT. Il indique le répertoire local dans 
 # lequel Django doit sauvegarder les images téléversées.
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

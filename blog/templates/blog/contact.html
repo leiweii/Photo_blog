@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Contactez-nous</h1>
+<p>Nous sommes là pour vous aider </p>
+<p>Merci de nous laisser un message.</p>
+
+
+<form action="" method="post" novalidate>
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Envoyer">
+</form>
+{% endblock content %}

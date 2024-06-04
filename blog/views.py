@@ -1,10 +1,12 @@
 from django.contrib.auth.decorators import login_required, permission_required
-from django.shortcuts import redirect, render
-from django.shortcuts import get_object_or_404  
+from django.shortcuts import redirect, render, get_object_or_404  
 # un moyen pratique et sécurisé de récupérer des objets de la base de données, 
 # en fournissant une gestion intégrée des erreurs lorsque les objets n'existent pas.
 from django.forms import formset_factory
-
+from django.core.mail import send_mail
+from blog.forms import ContactUsForm
+from django.db.models import Q
+from itertools import chain
 
 from . import forms, models
 
@@ -59,11 +61,40 @@ def view_photo(request, photo_id):
     photo = get_object_or_404(models.Photo, id=photo_id)
     return render(request, 'blog/view_photo.html', {'photo': photo})
 
+# @login_required
+# def home(request):
+#     photos = models.Photo.objects.all()
+#     blogs = models.Blog.objects.all()
+#     return render(request, 'blog/home.html', context={'photos': photos, 'blogs': blogs})
 @login_required
 def home(request):
-    photos = models.Photo.objects.all()
-    blogs = models.Blog.objects.all()
-    return render(request, 'blog/home.html', context={'photos': photos, 'blogs': blogs})
+    blogs = models.Blog.objects.filter(
+        Q(contributors__in=request.user.follows.all()) | Q(starred=True))
+    photos = models.Photo.objects.filter(
+        uploader__in=request.user.follows.all()).exclude(
+        blog__in=blogs)
+
+    blogs_and_photos = sorted(
+        chain(blogs, photos),
+        key=lambda instance: instance.date_created,
+        reverse=True
+    )
+
+    context = {
+        'blogs_and_photos': blogs_and_photos,
+    }
+    return render(request, 'blog/home.html', context=context)
+
+
+
+
+def photo_feed(request):
+    photos = models.Photo.objects.filter(
+        uploader__in=request.user.follows.all()).order_by('-date_created')
+    context = {
+        'photos': photos,
+    }
+    return render(request, 'blog/photo_feed.html', context=context)
 
 
 @login_required
@@ -118,3 +149,33 @@ def follow_users(request):
             form.save()
             return redirect('home')
     return render(request, 'blog/follow_users_form.html', context={'form': form})
+
+
+def about(request):
+    return render(request, 'blog/about.html')
+
+from django.core.mail import send_mail
+...
+
+def contact(request):
+    if request.method == 'POST':
+        # créer une instance de notre formulaire et le remplir avec les données POST
+        form = ContactUsForm(request.POST)
+
+        if form.is_valid():
+            send_mail(
+                subject=f'Message from {form.cleaned_data["Nom"] or "anonyme"} via MerchEx Contact Us form',
+                message=form.cleaned_data['message'],
+                from_email=form.cleaned_data['email'],
+                recipient_list=['shileiwei200@gmail.com'],
+            )
+            # Rediriger vers une page de remerciement ou afficher un message de succès
+            return redirect('confirmation')  # remplacez 'confirmation' par l'URL appropriée
+    else:
+        # ceci doit être une requête GET, donc créer un formulaire vide
+        form = ContactUsForm()
+
+    return render(request, 'blog/contact.html', {'form': form})
+
+def confirmation(request):
+    return render(request, 'blog/confirmation.html')
