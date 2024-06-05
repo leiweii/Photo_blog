@@ -28,6 +28,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('logout/', authentication.views.logout_user, name='logout'),
     path('home/', blog.views.home, name='home'),
+    path('photo-feed/', blog.views.photo_feed, name='photo_feed'),
     path('', LoginView.as_view(
             template_name='authentication/login.html',
             redirect_authenticated_user=True),

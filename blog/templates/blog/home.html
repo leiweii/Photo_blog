@@ -3,24 +3,13 @@
 {% block content %}
     <h2>Votre flux</h2>
     <div class="grid-container">
-        {% for instance in blogs_and_photos %}
+        {% for instance in page_obj %}
             {% if instance|model_type == 'Blog' %}
-                <div class="post">
-                    <a href="{% url 'view_blog' instance.id %}">
-                        <h4>Billet : {{ instance.title }}</h4>
-                        <img src="{{ instance.photo.image.url }}">
-                        <p><strong>Écrit par {{ instance.contributors.all|join:", " }}</strong></p>
-                        <p>{{ instance.date_created }}</p>
-                    </a>
-                </div>
+                {% include 'blog/partials/blog_snippet.html' with blog=instance %}
             {% elif instance|model_type == 'Photo' %}
-                <div class="post">
-                    <img src="{{ instance.image.url }}">
-                    <p>{{ instance.caption }}</p>
-                    <p><strong>Prise par {{ instance.uploader }}</strong></p>
-                    <p>{{ instance.date_created }}</p>
-                </div>
+                {% include 'blog/partials/photo_snippet.html' with photo=instance %}
             {% endif %}
         {% endfor %}
     </div>
+    {% include 'blog/partials/pagination.html' %}  {# Inclure la section de navigation #}
 {% endblock content %}
