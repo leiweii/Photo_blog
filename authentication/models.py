@@ -8,7 +8,7 @@ class User(AbstractUser):
 
     ROLE_CHOICES = (
         (CREATOR, 'Créateur'),
-        (SUBSCRIBER, 'Abonné'),
+        (SUBSCRIBER, 'Utilisateur'),
     )
     
     profile_photo = models.ImageField(verbose_name='Photo de profil', upload_to='profile_photos/')
@@ -30,5 +30,5 @@ class User(AbstractUser):
             group = Group.objects.get(name='créateurs')
             group.user_set.add(self)
         elif self.role == self.SUBSCRIBER:
-            group = Group.objects.get(name='abonnés')
+            group = Group.objects.get(name='utilisateurs')
             group.user_set.add(self)
