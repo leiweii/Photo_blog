@@ -4,6 +4,7 @@
   <h2>Changer de mot de passe</h2>
   <form method="post">
     {% csrf_token %}
+    <!-- Ajout du jeton CSRF pour la protection contre les attaques CSRF -->
     {{ form.as_p }}
     <button type="submit">Changer le mot de passe</button>
   </form>

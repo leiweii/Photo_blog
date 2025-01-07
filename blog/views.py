@@ -69,15 +69,18 @@ def view_photo(request, photo_id):
 #     return render(request, 'blog/home.html', context={'photos': photos, 'blogs': blogs})
 
 def home(request):
-    follows = request.user.follows.all()  # Retrieve related objects
+    follows = request.user.follows.all()  # Récupération des utilisateurs suivis par l'utilisateur actuel
+    # Récupération des blogs auxquels l'utilisateur est abonné ou qui sont marqués comme favoris
     blogs = models.Blog.objects.filter(
         Q(contributors__in=follows) | Q(starred=True)
     )
+    # Récupération des photos téléchargées par les utilisateurs suivis, mais qui ne sont pas liées à des blogs déjà récupérés
     photos = models.Photo.objects.filter(
         uploader__in=follows
     ).exclude(
         blog__in=blogs
     )
+    # Fusion des blogs et des photos, triés par date de création
     blogs_and_photos = sorted(
         chain(blogs, photos),
         key=lambda instance: instance.date_created,
@@ -85,10 +88,17 @@ def home(request):
     )
     
     paginator = Paginator(blogs_and_photos, 6)
-    
+
+    # Récupération du numéro de page à afficher à partir des paramètres de requête
     page_number = request.GET.get('page')
+    
+    # Obtention de l'objet de page pour le numéro de page spécifié
     page_obj = paginator.get_page(page_number)
+    
+    # Contexte à passer au modèle pour le rendu
     context = {'page_obj': page_obj}
+    
+    # Rendu de la page d'accueil avec le contexte spécifié
     return render(request, 'blog/home.html', context=context)
 
 

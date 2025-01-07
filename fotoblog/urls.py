@@ -71,4 +71,4 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(
         settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-#  les images stockées dans le répertoireMEDIA_ROOTseront servies au chemin donné parMEDIA_URL.
+#  les images stockées dans le répertoire MEDIA_ROOT seront servies au chemin donné par MEDIA_URL.
