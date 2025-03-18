@@ -103,7 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
     # },
     # {
     #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',         ne peut pas être un mot de passe couramment utilisé.
-    # },
+    # 
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
@@ -152,4 +152,21 @@ MEDIA_ROOT = BASE_DIR.joinpath('media/')
 # Le deuxième paramètre à configurer est  MEDIA_ROOT. Il indique le répertoire local dans 
 # lequel Django doit sauvegarder les images téléversées.
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+
+# Paramètres pour l'envoi d'e-mails via Gmail
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'shileiwei200@gmail.com'
+EMAIL_HOST_PASSWORD = 'gfimpmiubktrryum'
+
+
+# Supprime la ligne "EMAIL_BACKEND = console" (si existante)
+
+# Adresse email par défaut pour l'expéditeur
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

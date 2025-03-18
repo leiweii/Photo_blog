@@ -1,12 +1,16 @@
-{% extends 'base.html' %}
-{% block content %}
-    <h2>Inscription</h2>
-    {% if form.errors %}
-        {{ form.errors }}
-    {% endif %}
-    <form method="post">
-        {{ form.as_p }}
-        {% csrf_token %}
-        <button type="submit" >S’inscrire</button>
-    </form>
-{% endblock content %}
+{% extends 'base.html' %} {% block content %}
+<h2>S'inscrire</h2>
+
+<form method="post">
+  {% csrf_token %} {% if form.errors %}
+  <ul>
+    {% for field in form %} {% for error in field.errors %}
+    <li>{{ error }}</li>
+    {% endfor %} {% endfor %} {% for error in form.non_field_errors %}
+    <li>{{ error }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %} {{ form.as_p }}
+  <button type="submit">S’inscrire</button>
+</form>
+{% endblock %}

@@ -10,6 +10,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django import forms
 
 class SignupForm(UserCreationForm):
+    email = forms.EmailField(required=True)
+    
     # Classe Meta pour spécifier des options supplémentaires
     class Meta(UserCreationForm.Meta):
         model = get_user_model()
