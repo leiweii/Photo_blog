@@ -28,6 +28,9 @@ class FollowUsersForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['follows']
+        widgets = {
+            'follows': forms.CheckboxSelectMultiple,
+        }
 
 class ContactUsForm(forms.Form):
     Nom = forms.CharField(required=False)

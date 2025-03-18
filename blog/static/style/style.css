@@ -90,56 +90,60 @@ html {
 }
 
 
+
+
 .follow-container {
     max-width: 500px;
-    margin: 50px auto;
+    margin: 40px auto;
+    padding: 25px;
     background: #fff;
-    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    font-family: Arial, sans-serif;
 }
 
-/* Titre */
 .follow-container h2 {
+    text-align: center;
     color: #333;
-    font-size: 24px;
     margin-bottom: 20px;
 }
 
-/* Style du formulaire */
 .follow-container form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-/* Champs du formulaire */
-.follow-container form p {
-    width: 100%;
-    margin-bottom: 15px;
+    gap: 15px;
 }
 
 .follow-container input,
 .follow-container select {
-    width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 6px;
+    font-size: 15px;
 }
 
-/* Bouton */
+.follow-container input:focus,
+.follow-container select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.follow-container input[type="checkbox"] {
+    accent-color: #007bff;
+    width: 16px;
+    height: 16px;
+}
+
 .follow-container button {
+    padding: 10px;
     background-color: #007bff;
-    color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    color: white;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 .follow-container button:hover {
-    background-color: #0056b3;
+    background-color: #0060d0;
 }
