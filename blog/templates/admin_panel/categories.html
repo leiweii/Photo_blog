@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Catégories</h2>
+
+<a href="{% url 'admin_add_category' %}">+ Ajouter une catégorie</a>
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cat in categories %}
+            <tr>
+                <td>{{ cat.name }}</td>
+                <td>
+                    <a href="{% url 'admin_edit_category' cat.id %}">Modifier</a>
+                    <a href="{% url 'admin_delete_category' cat.id %}" onclick="return confirm('Supprimer cette catégorie ?')">Supprimer</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'admin_panel' %}">Retour</a>
+{% endblock %}

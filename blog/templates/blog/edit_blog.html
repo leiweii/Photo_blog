@@ -1,16 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
     <h2>Modifier le billet</h2>
-    <form method="post">
-        {{ edit_form.as_p }}
-        {% csrf_token %}
-        <button type="submit" >Sauvegarder</button>
-    </form>
-    <hr>
-    <h3>Supprimer le billet ?</h3>
-    <form method="post">
-        {{ delete_form }}
-        {% csrf_token %}
-        <button type="submit" >Supprimer</button>
-    </form>
+
+    {% if request.user == edit_form.instance.author %}
+        <form method="post">
+            {{ edit_form.as_p }}
+            {% csrf_token %}
+            <button type="submit" name="edit_blog">Sauvegarder</button>
+        </form>
+        <hr>
+        <h3>Supprimer le billet ?</h3>
+        <form method="post">
+            {{ delete_form }}
+            {% csrf_token %}
+            <button type="submit" name="delete_blog">Supprimer</button>
+        </form>
+    {% else %}
+        <p>Vous n’avez pas le droit de modifier ce billet.</p>
+    {% endif %}
 {% endblock content %}

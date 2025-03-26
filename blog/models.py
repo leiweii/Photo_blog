@@ -2,11 +2,18 @@ from django.conf import settings
 from django.db import models
 from PIL import Image
 
+class Categorie(models.Model):
+    name = models.CharField(max_length=100, unique=True, verbose_name='Nom de la catégorie')
+
+    def __str__(self):
+        return self.name
+
 
 class Photo(models.Model):
     image = models.ImageField(verbose_name='image')
     caption = models.CharField(max_length=128, blank=True, verbose_name='légende')
     uploader = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    categorie = models.ForeignKey(Categorie, on_delete=models.SET_NULL, null=True, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
 
     IMAGE_MAX_SIZE = (800, 800)
@@ -21,14 +28,18 @@ class Photo(models.Model):
         self.resize_image()
 
     def __str__(self):
-     return f'{self.caption}'
+        return f'{self.caption}'
+
 
 
 class Blog(models.Model):
-    photo = models.ForeignKey(Photo, null=True, on_delete=models.SET_NULL, blank=True)
+    photo = models.ForeignKey('Photo', null=True, on_delete=models.SET_NULL, blank=True)
     title = models.CharField(max_length=128, verbose_name='titre')
     content = models.CharField(max_length=5000, verbose_name='contenu')
-    # author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
+    categorie = models.ForeignKey('Categorie', on_delete=models.SET_NULL, null=True, blank=True)
+    
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='blogs') 
+    
     date_created = models.DateTimeField(auto_now_add=True)
     starred = models.BooleanField(default=False)
     word_count = models.IntegerField(null=True)
@@ -42,8 +53,8 @@ class Blog(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-     return f'{self.title}'
-        
+        return f'{self.title}'
+
 
 class BlogContributor(models.Model):
     contributor = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -52,3 +63,13 @@ class BlogContributor(models.Model):
     
     class Meta:
         unique_together = ('contributor', 'blog')
+
+
+class PhotoComment(models.Model):
+    photo = models.ForeignKey(Photo, on_delete=models.CASCADE, related_name='comments')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    text = models.TextField(verbose_name="Commentaire")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Commentaire par {self.user.username} sur {self.photo.caption}"

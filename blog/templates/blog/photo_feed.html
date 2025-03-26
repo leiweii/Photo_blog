@@ -1,10 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h2>Flux de photos</h2>
-    <div class="grid-container">
-        {% for photo in page_obj %}
-            {% include 'blog/partials/photo_snippet.html' %}
-        {% endfor %}
-    </div>
-    {% include 'blog/partials/pagination.html' %}  {# Inclure la section de navigation #}
+  <h2 class="mb-4">📸 Flux de photos</h2>
+
+  <form method="get" class="mb-4">
+    <select name="categorie" onchange="this.form.submit()" class="form-select w-auto">
+      <option value="">Toutes les catégories</option>
+      {% for cat in categories %}
+        <option value="{{ cat.id }}" {% if request.GET.categorie == cat.id|stringformat:"s" %}selected{% endif %}>
+          {{ cat.name }}
+        </option>
+      {% endfor %}
+    </select>
+  </form>
+
+  <div class="row g-4">
+    {% if page_obj %}
+      {% for photo in page_obj %}
+        <div class="col-md-3">
+          {% include 'blog/partials/photo_snippet.html' %}
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>Aucune photo à afficher pour l’instant.</p>
+    {% endif %}
+  </div>
+
+  {% include 'blog/partials/pagination.html' %}
 {% endblock content %}

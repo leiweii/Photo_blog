@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Articles de blog</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Contributeurs</th>
+            <th>Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for blog in blogs %}
+            <tr>
+                <td>{{ blog.title }}</td>
+                <td>
+                    {% for user in blog.contributors.all %}
+                        {{ user.username }}{% if not forloop.last %}, {% endif %}
+                    {% endfor %}
+                </td>
+                <td>{{ blog.date_created }}</td>
+                <td>
+                    <a href="{% url 'admin_delete_blog' blog.id %}" onclick="return confirm('Supprimer ce blog ?')">Supprimer</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'admin_panel' %}">Retour</a>
+{% endblock %}

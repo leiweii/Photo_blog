@@ -1,14 +1,20 @@
 from django import forms
 from django.contrib.auth import get_user_model
-
+from .models import PhotoComment, Photo, Categorie
 from . import models
 
 User = get_user_model()
 
 class PhotoForm(forms.ModelForm):
     class Meta:
-        model = models.Photo
-        fields = ['image', 'caption']
+        model = Photo
+        fields = ['image', 'caption', 'categorie']
+
+
+class CategoryForm(forms.ModelForm):
+    class Meta:
+        model = Categorie
+        fields = ['name']
 
 
 class BlogForm(forms.ModelForm):
@@ -31,6 +37,13 @@ class FollowUsersForm(forms.ModelForm):
         widgets = {
             'follows': forms.CheckboxSelectMultiple,
         }
+
+
+class PhotoCommentForm(forms.ModelForm):
+    class Meta:
+        model = PhotoComment
+        fields = ['text']
+
 
 class ContactUsForm(forms.Form):
     Nom = forms.CharField(required=False)

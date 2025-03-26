@@ -1,34 +1,35 @@
 from django.contrib.auth.models import AbstractUser, Group
 from django.db import models
 
+from django.contrib.auth.models import AbstractUser, Group
+from django.db import models
+
 class User(AbstractUser):
     
     CREATOR = 'CREATOR'
     SUBSCRIBER = 'SUBSCRIBER'
 
     ROLE_CHOICES = (
-        (CREATOR, 'Créateur'),
-        (SUBSCRIBER, 'Utilisateur'),
+        (CREATOR, 'Photographe'),
+        (SUBSCRIBER, 'Visiteur'),
     )
     
     profile_photo = models.ImageField(verbose_name='Photo de profil', upload_to='profile_photos/')
     role = models.CharField(max_length=30, choices=ROLE_CHOICES, verbose_name='Rôle')
+
     follows = models.ManyToManyField(
         'self',
         limit_choices_to={'role': CREATOR},
         symmetrical=False,
         verbose_name='suit',
-# Le premier argument de ManyToManyField est le modèle avec lequel vous créez une relation, 
-# ici 'self' pour le modèle User. Utilisez limit_choices_to pour restreindre les utilisateurs 
-# suivis aux rôles spécifiques, comme CREATOR. Spécifiez symmetrical=False pour indiquer que la 
-# relation n'est pas symétrique, nécessaire seulement lorsque les deux modèles sont identiques.
     )
 
+    # ✅ Cette méthode doit être DANS la classe
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
         if self.role == self.CREATOR:
-            group = Group.objects.get(name='créateurs')
+            group, _ = Group.objects.get_or_create(name='créateurs')
             group.user_set.add(self)
         elif self.role == self.SUBSCRIBER:
-            group = Group.objects.get(name='utilisateurs')
+            group, _ = Group.objects.get_or_create(name='utilisateurs')
             group.user_set.add(self)

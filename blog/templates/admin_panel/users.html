@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Gestion des utilisateurs</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Rôle</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.get_role_display }}</td>
+                <td>
+                    <form method="post" action="{% url 'admin_users' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="user_id" value="{{ user.id }}">
+                        <select name="new_role">
+                            <option value="CREATOR" {% if user.role == "CREATOR" %}selected{% endif %}>Créateur</option>
+                            <option value="SUBSCRIBER" {% if user.role == "SUBSCRIBER" %}selected{% endif %}>Abonné</option>
+                        </select>
+                        <button type="submit">Changer le rôle</button>
+                    </form>
+                    {% if user != request.user %}
+                        <a href="{% url 'admin_delete_user' user.id %}" onclick="return confirm('Supprimer cet utilisateur ?')">Supprimer</a>
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'admin_panel' %}">Retour</a>
+{% endblock %}

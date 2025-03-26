@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Panneau d’administration</h2>
+<ul>
+    <li><a href="{% url 'admin_users' %}">Gérer les utilisateurs</a></li>
+    <li><a href="{% url 'admin_photos' %}">Gérer les photos</a></li>
+    <li><a href="{% url 'admin_blogs' %}">Gérer les blogs</a></li>
+    <li><a href="{% url 'admin_categories' %}">Gérer les catégories</a></li>
+</ul>
+{% endblock %}

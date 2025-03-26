@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Supprimer la photo</h2>
+    <p>Es-tu sûr(e) de vouloir supprimer cette photo ?</p>
+    <img src="{{ photo.image.url }}" alt="{{ photo.caption }}" width="300">
+    <p>{{ photo.caption }}</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Oui, supprimer</button>
+        <a href="{% url 'view_photo' photo.id %}">Annuler</a>
+    </form>
+{% endblock content %}

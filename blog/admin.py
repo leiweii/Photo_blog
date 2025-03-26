@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Photo, Blog, BlogContributor
+from .models import Photo, Blog, BlogContributor, Categorie
 
 class PhotoAdmin(admin.ModelAdmin):
     list_display = ('caption', 'image',  'uploader', 'date_created')
@@ -11,6 +11,10 @@ class CustomBlogContributorAdmin(admin.ModelAdmin):
     list_display = ('contributor', 'blog', 'contribution')
 
 
+
 admin.site.register(BlogContributor, CustomBlogContributorAdmin)
 admin.site.register(Photo, PhotoAdmin)
 admin.site.register(Blog, BlogAdmin)
+
+
+admin.site.register(Categorie)

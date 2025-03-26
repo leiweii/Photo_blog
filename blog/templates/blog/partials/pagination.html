@@ -1,18 +1,28 @@
-
-<div class="pagination">
-    <span class="step-links">
-        {% if page_obj.has_previous %}
-            <a href="?page=1">&laquo; première</a>
-            <a href="?page={{ page_obj.previous_page_number }}">précédent</a>
-        {% endif %}
-
-        <span class="current">
-            Page {{ page_obj.number }} sur {{ page_obj.paginator.num_pages }}.
+<nav aria-label="Pagination">
+    <ul class="pagination justify-content-center">
+      {% if page_obj.has_previous %}
+        <li class="page-item">
+          <a class="page-link" href="?page=1">&laquo; Première</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Précédent</a>
+        </li>
+      {% endif %}
+  
+      <li class="page-item disabled">
+        <span class="page-link">
+          Page {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
         </span>
-
-        {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}">suivant</a>
-            <a href="?page={{ page_obj.paginator.num_pages }}">dernière &raquo;</a>
-        {% endif %}
-    </span>
-</div>
+      </li>
+  
+      {% if page_obj.has_next %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.next_page_number }}">Suivant</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Dernière &raquo;</a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+  

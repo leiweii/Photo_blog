@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Photos publiées</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Légende</th>
+            <th>Par</th>
+            <th>Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for photo in photos %}
+            <tr>
+                <td><img src="{{ photo.image.url }}" width="100"></td>
+                <td>{{ photo.caption }}</td>
+                <td>{{ photo.uploader.username }}</td>
+                <td>{{ photo.date_created }}</td>
+                <td>
+                    <a href="{% url 'admin_delete_photo' photo.id %}" onclick="return confirm('Supprimer cette photo ?')">Supprimer</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'admin_panel' %}">Retour</a>
+{% endblock %}
