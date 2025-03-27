@@ -13,6 +13,12 @@ from . import forms, models
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth import get_user_model
 from .forms import CategoryForm
+from django.contrib.contenttypes.models import ContentType
+from .models import Photo, Commentaire
+from .forms import CommentaireForm
+from django.contrib.contenttypes.models import ContentType
+from .models import Blog, Commentaire
+from .forms import CommentaireForm
 
 
 @staff_member_required
@@ -63,32 +69,57 @@ def blog_and_photo_upload(request):
 
 
 
+
 @login_required
 def view_blog(request, blog_id):
-    blog = get_object_or_404(models.Blog, id=blog_id)
-    return render(request, 'blog/view_blog.html', {'blog': blog})
+    blog = get_object_or_404(Blog, id=blog_id)
+    content_type = ContentType.objects.get_for_model(Blog)
+    comments = Commentaire.objects.filter(content_type=content_type, object_id=blog.id).order_by('-created_at')
+    comment_form = CommentaireForm()
+
+    if request.method == 'POST':
+        comment_form = CommentaireForm(request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.user = request.user
+            comment.content_type = content_type
+            comment.object_id = blog.id
+            comment.save()
+            return redirect('view_blog', blog_id=blog.id)
+
+    context = {
+        'blog': blog,
+        'comments': comments,
+        'comment_form': comment_form,
+    }
+    return render(request, 'blog/view_blog.html', context)
+
+
 
 
 @login_required
 def view_photo(request, photo_id):
-    photo = get_object_or_404(models.Photo, id=photo_id)
-    comments = photo.comments.all()
-    comment_form = forms.PhotoCommentForm()
+    photo = get_object_or_404(Photo, id=photo_id)
+    content_type = ContentType.objects.get_for_model(Photo)
+    comments = Commentaire.objects.filter(content_type=content_type, object_id=photo.id).order_by('-created_at')
+    comment_form = CommentaireForm()
 
     if request.method == 'POST':
-        comment_form = forms.PhotoCommentForm(request.POST)
+        comment_form = CommentaireForm(request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.user = request.user
-            comment.photo = photo
+            comment.content_type = content_type
+            comment.object_id = photo.id
             comment.save()
-            return redirect('view_photo', photo_id=photo_id)
+            return redirect('view_photo', photo_id=photo.id)
 
-    return render(request, 'blog/view_photo.html', {
+    context = {
         'photo': photo,
         'comments': comments,
-        'comment_form': comment_form
-    })
+        'comment_form': comment_form,
+    }
+    return render(request, 'blog/view_photo.html', context)
 
 
 

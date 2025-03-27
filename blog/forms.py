@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth import get_user_model
-from .models import PhotoComment, Photo, Categorie
+from .models import Commentaire, Photo, Categorie
 from . import models
 
 User = get_user_model()
@@ -39,11 +39,22 @@ class FollowUsersForm(forms.ModelForm):
         }
 
 
-class PhotoCommentForm(forms.ModelForm):
-    class Meta:
-        model = PhotoComment
-        fields = ['text']
+# class PhotoCommentForm(forms.ModelForm):
+#     class Meta:
+#         model = PhotoComment
+#         fields = ['text']
 
+
+from django import forms
+from .models import Commentaire
+
+class CommentaireForm(forms.ModelForm):
+    class Meta:
+        model = Commentaire
+        fields = ['text']
+        widgets = {
+            'text': forms.Textarea(attrs={'rows': 2, 'class': 'form-control', 'placeholder': 'Laisser un commentaire...'}),
+        }
 
 class ContactUsForm(forms.Form):
     Nom = forms.CharField(required=False)

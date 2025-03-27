@@ -1,6 +1,8 @@
 from django.conf import settings
 from django.db import models
 from PIL import Image
+from django.contrib.contenttypes.models import ContentType
+from django.contrib.contenttypes.fields import GenericForeignKey
 
 class Categorie(models.Model):
     name = models.CharField(max_length=100, unique=True, verbose_name='Nom de la catégorie')
@@ -65,11 +67,15 @@ class BlogContributor(models.Model):
         unique_together = ('contributor', 'blog')
 
 
-class PhotoComment(models.Model):
-    photo = models.ForeignKey(Photo, on_delete=models.CASCADE, related_name='comments')
+
+class Commentaire(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    text = models.TextField(verbose_name="Commentaire")
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    object_id = models.PositiveIntegerField()
+    content_object = GenericForeignKey("content_type", "object_id")
+
+    text = models.TextField("Commentaire")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"Commentaire par {self.user.username} sur {self.photo.caption}"
+        return f"Commentaire de {self.user} sur {self.content_object}"
