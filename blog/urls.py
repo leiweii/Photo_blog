@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin-panel/categories/add/', views.admin_add_category, name='admin_add_category'),
     path('admin-panel/categories/edit/<int:cat_id>/', views.admin_edit_category, name='admin_edit_category'),
     path('admin-panel/categories/delete/<int:cat_id>/', views.admin_delete_category, name='admin_delete_category'),
+    path('blog/create/', views.blog_and_photo_upload, name='blog_and_photo_upload'),
 
 ]

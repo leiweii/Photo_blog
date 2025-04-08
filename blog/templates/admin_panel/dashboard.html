@@ -1,10 +1,50 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2>Panneau d’administration</h2>
-<ul>
-    <li><a href="{% url 'admin_users' %}">Gérer les utilisateurs</a></li>
-    <li><a href="{% url 'admin_photos' %}">Gérer les photos</a></li>
-    <li><a href="{% url 'admin_blogs' %}">Gérer les blogs</a></li>
-    <li><a href="{% url 'admin_categories' %}">Gérer les catégories</a></li>
-</ul>
+<div class="container py-4">
+  <h2 class="mb-4">⚙️ Panneau d’administration</h2>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
+
+    <div class="col">
+      <div class="card border-primary shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">👥 Utilisateurs</h5>
+          <p class="card-text">Voir et gérer les comptes utilisateurs (créateurs et abonnés).</p>
+          <a href="{% url 'admin_users' %}" class="btn btn-outline-primary">Gérer les utilisateurs</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card border-success shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">📷 Photos</h5>
+          <p class="card-text">Consulter et supprimer les photos publiées par les créateurs.</p>
+          <a href="{% url 'admin_photos' %}" class="btn btn-outline-success">Gérer les photos</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card border-warning shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">📝 Blogs</h5>
+          <p class="card-text">Gérer les billets de blog associés aux photos des créateurs.</p>
+          <a href="{% url 'admin_blogs' %}" class="btn btn-outline-warning">Gérer les blogs</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card border-info shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">🏷️ Catégories</h5>
+          <p class="card-text">Ajouter, modifier ou supprimer des catégories de photos et blogs.</p>
+          <a href="{% url 'admin_categories' %}" class="btn btn-outline-info">Gérer les catégories</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 {% endblock %}

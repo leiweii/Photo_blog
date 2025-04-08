@@ -1,30 +1,39 @@
-{% extends 'base.html' %}
-{% block content %}
-<h2>Photos publiées</h2>
+{% extends 'base.html' %} {% block content %}
+<h2>📷 Gestion des photos</h2>
 
-<table>
-    <thead>
-        <tr>
-            <th>Image</th>
-            <th>Légende</th>
-            <th>Par</th>
-            <th>Date</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for photo in photos %}
-            <tr>
-                <td><img src="{{ photo.image.url }}" width="100"></td>
-                <td>{{ photo.caption }}</td>
-                <td>{{ photo.uploader.username }}</td>
-                <td>{{ photo.date_created }}</td>
-                <td>
-                    <a href="{% url 'admin_delete_photo' photo.id %}" onclick="return confirm('Supprimer cette photo ?')">Supprimer</a>
-                </td>
-            </tr>
-        {% endfor %}
-    </tbody>
+<div class="mb-3">
+    <a href="{% url 'photo_upload' %}" class="btn btn-success">📤 Ajouter une photo</a>
+    <a href="{% url 'admin_panel' %}" class="btn btn-secondary">⬅ Retour</a>
+</div>
+  
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Légende</th>
+      <th>Uploader</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for photo in photos %}
+    <tr>
+      <td><img src="{{ photo.image.url }}" width="100" /></td>
+      <td>{{ photo.caption }}</td>
+      <td>{{ photo.uploader.username }}</td>
+      <td>{{ photo.date_created|date:"d/m/Y H:i" }}</td>
+      <td>
+        <a href="{% url 'edit_photo' photo.id %}" class="btn btn-sm btn-warning">✏️</a>
+        <a
+          href="{% url 'admin_delete_photo' photo.id %}"
+          class="btn btn-sm btn-danger"
+          onclick="return confirm('Supprimer cette photo ?')"
+          >🗑</a
+        >
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
 </table>
-<a href="{% url 'admin_panel' %}">Retour</a>
 {% endblock %}

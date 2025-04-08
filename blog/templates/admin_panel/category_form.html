@@ -1,11 +1,19 @@
 {% extends 'base.html' %}
-{% block content %}
-<h2>{{ action }} une catégorie</h2>
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">{{ action }}</button>
-</form>
-<a href="{% url 'admin_categories' %}">Retour</a>
+{% block content %}
+<div class="container mt-4">
+  <div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h4 class="mb-0">{{ action }} une catégorie</h4>
+    </div>
+    <div class="card-body">
+      <form method="post" class="needs-validation" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">{{ action }}</button>
+        <a href="{% url 'admin_categories' %}" class="btn btn-secondary">Retour</a>
+      </form>
+    </div>
+  </div>
+</div>
 {% endblock %}

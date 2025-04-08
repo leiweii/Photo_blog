@@ -1,29 +1,20 @@
+# Imports Django standard
 from django.contrib.auth.decorators import login_required, permission_required
-from django.shortcuts import redirect, render, get_object_or_404  
-# un moyen pratique et sécurisé de récupérer des objets de la base de données, 
-# en fournissant une gestion intégrée des erreurs lorsque les objets n'existent pas.
-from django.forms import formset_factory
-from django.core.mail import send_mail
-from blog.forms import ContactUsForm
-from django.db.models import Q
-from itertools import chain
-from django.core.paginator import Paginator
-from django.core.exceptions import PermissionDenied
-from . import forms, models
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth import get_user_model
-from .forms import CategoryForm
-from django.contrib.contenttypes.models import ContentType
-from .models import Photo, Commentaire
-from .forms import CommentaireForm
-from django.contrib.contenttypes.models import ContentType
-from .models import Blog, Commentaire
-from .forms import CommentaireForm
-from django.contrib.contenttypes.models import ContentType
 from django.core.exceptions import PermissionDenied
+from django.core.mail import send_mail
+from django.core.paginator import Paginator
+from django.db.models import Q
+from django.forms import formset_factory
 from django.shortcuts import get_object_or_404, redirect, render
-from .models import Commentaire
-from .forms import CommentaireForm
+from django.contrib.contenttypes.models import ContentType
+from itertools import chain
+# Imports internes au projet
+from . import forms, models
+from .forms import CategoryForm, CommentaireForm, ContactUsForm
+from .models import Blog, Commentaire, Photo
+
 
 @staff_member_required
 def admin_panel(request):
@@ -48,39 +39,26 @@ def photo_upload(request):
 @permission_required(['blog.add_photo', 'blog.add_blog'])
 def blog_and_photo_upload(request):
     blog_form = forms.BlogForm()
-    # photo_form = forms.PhotoForm()
-    
+    user_photos = models.Photo.objects.filter(uploader=request.user)
+
     if request.method == 'POST':
         blog_form = forms.BlogForm(request.POST)
-        # photo_form = forms.PhotoForm(request.POST, request.FILES)
-        
-# and photo_form.is_valid()
-        if blog_form.is_valid() :
-            # Traitement de la photo
-            # photo = photo_form.save(commit=False)
-            # photo.uploader = request.user
-            # photo.save()
-            # photo_form.save_m2m()  # facultatif si tu as aussi des catégories pour photo
+        selected_photo_id = request.POST.get('photo_choice')
 
-            # Traitement du blog
+        if blog_form.is_valid() and selected_photo_id:
             blog = blog_form.save(commit=False)
-            # blog.photo = photo
+            blog.photo = get_object_or_404(models.Photo, id=selected_photo_id, uploader=request.user)
             blog.author = request.user
             blog.save()
 
-            blog_form.save_m2m()  # 🔁 ICI : enregistre les catégories
-
-            # Ajouter le contributeur
             blog.contributors.add(request.user, through_defaults={'contribution': 'Auteur principal'})
-
-            return redirect('home')
+            return redirect('blog_feed')
 
     context = {
         'blog_form': blog_form,
-        # 'photo_form': photo_form,
+        'user_photos': user_photos,
     }
     return render(request, 'blog/create_blog_post.html', context=context)
-
 
 
 @login_required

@@ -1,26 +1,35 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2>Catégories</h2>
+<div class="container mt-4">
+  <h2 class="mb-4">📂 Gestion des catégories</h2>
 
-<a href="{% url 'admin_add_category' %}">+ Ajouter une catégorie</a>
-<table>
-    <thead>
-        <tr>
-            <th>Nom</th>
-            <th>Actions</th>
-        </tr>
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <a href="{% url 'admin_add_category' %}" class="btn btn-success">➕ Ajouter une catégorie</a>
+    <a href="{% url 'admin_panel' %}" class="btn btn-secondary">⬅ Retour au panneau admin</a>
+  </div>
+
+  <table class="table table-bordered table-hover table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Nom</th>
+        <th scope="col" style="width: 180px;">Actions</th>
+      </tr>
     </thead>
     <tbody>
-        {% for cat in categories %}
-            <tr>
-                <td>{{ cat.name }}</td>
-                <td>
-                    <a href="{% url 'admin_edit_category' cat.id %}">Modifier</a>
-                    <a href="{% url 'admin_delete_category' cat.id %}" onclick="return confirm('Supprimer cette catégorie ?')">Supprimer</a>
-                </td>
-            </tr>
-        {% endfor %}
+      {% for cat in categories %}
+        <tr>
+          <td>{{ cat.name }}</td>
+          <td>
+            <a href="{% url 'admin_edit_category' cat.id %}" class="btn btn-sm btn-outline-primary me-2">✏️ Modifier</a>
+            <a href="{% url 'admin_delete_category' cat.id %}" class="btn btn-sm btn-outline-danger" onclick="return confirm('Supprimer cette catégorie ?')">🗑 Supprimer</a>
+          </td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="2" class="text-center text-muted">Aucune catégorie trouvée.</td>
+        </tr>
+      {% endfor %}
     </tbody>
-</table>
-<a href="{% url 'admin_panel' %}">Retour</a>
+  </table>
+</div>
 {% endblock %}

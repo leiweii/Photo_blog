@@ -1,15 +1,51 @@
-{% comment %} {% extends 'base.html' %}
-{% load blog_extras %}
+{% extends 'base.html' %}
 {% block content %}
-    <h2>Votre flux</h2>
-    <div class="grid-container">
-        {% for instance in page_obj %}
-            {% if instance|model_type == 'Blog' %}
-                {% include 'blog/partials/blog_snippet.html' with blog=instance %}
-            {% elif instance|model_type == 'Photo' %}
-                {% include 'blog/partials/photo_snippet.html' with photo=instance %}
-            {% endif %}
-        {% endfor %}
+
+<div class="container mt-5">
+  <div class="text-center">
+    <h1 class="display-4">Bienvenue sur notre plateforme 📸</h1>
+    <p class="lead">Un espace dédié aux photographes pour partager leur passion et échanger avec leur communauté.</p>
+  </div>
+
+  <hr class="my-4">
+
+  <div class="row mt-5">
+    <div class="col-md-6">
+      <h2>🎯 Objectif du projet</h2>
+      <p>
+        Ce site a été conçu pour répondre au besoin d’un collectif de photographes souhaitant partager facilement leurs œuvres et écrire des articles de blog à propos de leur travail.
+        Ils veulent toucher un large public et créer une véritable communauté autour de leurs créations.
+      </p>
     </div>
-    {% include 'blog/partials/pagination.html' %} 
-{% endblock content %} {% endcomment %}
+    <div class="col-md-6">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=60" class="img-fluid rounded shadow" alt="Photographie d'accueil">
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-md-4">
+      <h3>🧑‍🎨 Créateurs</h3>
+      <p>Les créateurs peuvent téléverser des photos, écrire des billets de blog et interagir avec leur public. Ils sont les piliers de la plateforme.</p>
+    </div>
+    <div class="col-md-4">
+      <h3>👥 Abonnés</h3>
+      <p>Les abonnés peuvent explorer le contenu, commenter, suivre leurs créateurs préférés et créer un lien fort avec les artistes.</p>
+    </div>
+    <div class="col-md-4">
+      <h3>📣 Flux Social</h3>
+      <p>Le flux présente en temps réel les publications des créateurs que vous suivez : photos, blogs et bien plus à découvrir.</p>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <div class="text-center">
+    <h2>🚀 Commencer l’exploration</h2>
+    <p>Connectez-vous ou créez un compte pour découvrir des talents, interagir et enrichir votre inspiration artistique.</p>
+    <a href="{% url 'login' %}" class="btn btn-primary btn-lg m-2">Se connecter</a>
+    <a href="{% url 'photo_feed' %}" class="btn btn-outline-secondary btn-lg m-2">Voir les photos</a>
+    <a href="{% url 'blog_feed' %}" class="btn btn-outline-secondary btn-lg m-2">Lire les blogs</a>
+  </div>
+</div>
+
+{% endblock %}

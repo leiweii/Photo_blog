@@ -15,13 +15,14 @@ class PhotoForm(forms.ModelForm):
         model = Photo
         fields = ['image', 'caption', 'categories'] 
         widgets = {
+            'caption': forms.TextInput(attrs={'class': 'form-control'}),
             'categories': forms.CheckboxSelectMultiple(), 
         }
 
 class BlogForm(forms.ModelForm):
     class Meta:
         model = Blog
-        fields = ['title', 'content', 'photo', 'categories']
+        fields = ['title', 'content', 'categories']
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
 
@@ -30,8 +31,6 @@ class BlogForm(forms.ModelForm):
                 'class': 'form-control',
                 'placeholder': 'Rédigez votre contenu ici...'
             }),
-            'photo': forms.Select(attrs={'class': 'form-select'}),
-
             'categories': forms.CheckboxSelectMultiple(),
         }
 

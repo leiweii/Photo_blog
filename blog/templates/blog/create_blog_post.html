@@ -1,42 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
-  <h2>📖 Écrire un blog</h2>
+  <h2>📝 Écrire un blog</h2>
 
-  <form method="post" enctype="multipart/form-data">
+  <form method="post">
     {% csrf_token %}
-
     {{ blog_form.as_p }}
-    {{ photo_form.as_p }}
 
-    <!-- Aperçu dynamique de la photo uploadée -->
-    <div class="mb-3">
-      <label><strong>Aperçu de la photo :</strong></label><br>
-      <img id="photo-preview" src="#" alt="Aperçu" style="max-width: 300px; display: none;" />
+    <h4>📷 Choisis une photo</h4>
+    <div class="row">
+      {% for photo in user_photos %}
+        <div class="col-md-3 mb-3 text-center">
+          <label style="cursor:pointer;">
+            <input type="radio" name="photo_choice" value="{{ photo.id }}" required>
+            <img src="{{ photo.image.url }}" alt="{{ photo.caption }}" class="img-thumbnail" width="200"><br>
+            {{ photo.caption }}
+          </label>
+        </div>
+      {% empty %}
+        <p class="text-muted">Aucune photo disponible. <a href="{% url 'photo_upload' %}">Uploader une photo</a></p>
+      {% endfor %}
     </div>
 
     <button type="submit" class="btn btn-primary">Publier</button>
   </form>
-
-  <!-- Script JS pour affichage dynamique -->
-  <script>
-    const input = document.querySelector('input[type="file"]');
-    const preview = document.getElementById('photo-preview');
-
-    input.addEventListener('change', function () {
-      const file = this.files[0];
-      if (file) {
-        const reader = new FileReader();
-        preview.style.display = 'block';
-
-        reader.addEventListener("load", function () {
-          preview.setAttribute("src", this.result);
-        });
-
-        reader.readAsDataURL(file);
-      } else {
-        preview.style.display = 'none';
-        preview.removeAttribute("src");
-      }
-    });
-  </script>
-{% endblock content %}
+{% endblock %}
