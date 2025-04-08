@@ -1,21 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h2>Modifier le blog</h2>
 
-    {% if request.user == edit_form.instance.author %}
-        <form method="post">
-            {{ edit_form.as_p }}
-            {% csrf_token %}
-            <button type="submit" name="edit_blog">Sauvegarder</button>
-        </form>
-        <hr>
-        <h3>Supprimer le blog ?</h3>
-        <form method="post">
-            {{ delete_form }}
-            {% csrf_token %}
-            <button type="submit" name="delete_blog">Supprimer</button>
-        </form>
-    {% else %}
-        <p>Vous n’avez pas le droit de modifier ce blog.</p>
-    {% endif %}
-{% endblock content %}
+<h2>✏️ Modifier le blog</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ edit_form.as_p }}
+    <button type="submit" name="edit_blog" class="btn btn-primary">Sauvegarder</button>
+</form>
+
+<hr>
+
+<h3 class="mt-4 text-danger">🗑 Supprimer ce blog</h3>
+
+<form method="post">
+    {% csrf_token %}
+    {{ delete_form.as_p }}
+    <button type="submit" name="delete_blog" class="btn btn-danger" onclick="return confirm('Es-tu sûr de vouloir supprimer ce blog ?')">Supprimer</button>
+</form>
+
+<a href="{% url 'view_blog' blog.id %}" class="btn btn-link mt-3">⬅ Retour</a>
+
+{% endblock %}

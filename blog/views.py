@@ -48,25 +48,36 @@ def photo_upload(request):
 @permission_required(['blog.add_photo', 'blog.add_blog'])
 def blog_and_photo_upload(request):
     blog_form = forms.BlogForm()
-    photo_form = forms.PhotoForm()
+    # photo_form = forms.PhotoForm()
+    
     if request.method == 'POST':
         blog_form = forms.BlogForm(request.POST)
-        photo_form = forms.PhotoForm(request.POST, request.FILES)
-        if all([blog_form.is_valid(), photo_form.is_valid()]):
-            photo = photo_form.save(commit=False)
-            photo.uploader = request.user
-            photo.save()
+        # photo_form = forms.PhotoForm(request.POST, request.FILES)
+        
+# and photo_form.is_valid()
+        if blog_form.is_valid() :
+            # Traitement de la photo
+            # photo = photo_form.save(commit=False)
+            # photo.uploader = request.user
+            # photo.save()
+            # photo_form.save_m2m()  # facultatif si tu as aussi des catégories pour photo
 
+            # Traitement du blog
             blog = blog_form.save(commit=False)
-            blog.photo = photo
-            blog.author = request.user 
+            # blog.photo = photo
+            blog.author = request.user
             blog.save()
 
+            blog_form.save_m2m()  # 🔁 ICI : enregistre les catégories
+
+            # Ajouter le contributeur
             blog.contributors.add(request.user, through_defaults={'contribution': 'Auteur principal'})
+
             return redirect('home')
+
     context = {
         'blog_form': blog_form,
-        'photo_form': photo_form,
+        # 'photo_form': photo_form,
     }
     return render(request, 'blog/create_blog_post.html', context=context)
 
@@ -76,9 +87,9 @@ def blog_and_photo_upload(request):
 def edit_blog(request, blog_id):
     blog = get_object_or_404(models.Blog, id=blog_id)
 
-    # ✅ Vérifie si l'utilisateur est bien l'auteur
+    # Seul l’auteur peut modifier ou supprimer
     if blog.author != request.user:
-        raise PermissionDenied  # Affiche une erreur 403
+        raise PermissionDenied
 
     edit_form = forms.BlogForm(instance=blog)
     delete_form = forms.DeleteBlogForm()
@@ -88,19 +99,20 @@ def edit_blog(request, blog_id):
             edit_form = forms.BlogForm(request.POST, instance=blog)
             if edit_form.is_valid():
                 edit_form.save()
-                return redirect('home')
+                return redirect('view_blog', blog_id=blog.id)
+
         elif 'delete_blog' in request.POST:
             delete_form = forms.DeleteBlogForm(request.POST)
             if delete_form.is_valid():
                 blog.delete()
-                return redirect('home')
+                return redirect('blog_feed')
 
     context = {
         'edit_form': edit_form,
         'delete_form': delete_form,
+        'blog': blog,
     }
-    return render(request, 'blog/edit_blog.html', context=context)
-
+    return render(request, 'blog/edit_blog.html', context)
 
 @login_required
 def view_blog(request, blog_id):

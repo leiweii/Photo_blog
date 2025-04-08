@@ -21,14 +21,24 @@ class PhotoForm(forms.ModelForm):
 class BlogForm(forms.ModelForm):
     class Meta:
         model = Blog
-        fields = ['title', 'content', 'categories']
+        fields = ['title', 'content', 'photo', 'categories']
         widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+
+             'content': forms.Textarea(attrs={
+                'rows': 10,
+                'class': 'form-control',
+                'placeholder': 'Rédigez votre contenu ici...'
+            }),
+            'photo': forms.Select(attrs={'class': 'form-select'}),
+
             'categories': forms.CheckboxSelectMultiple(),
         }
 
         
+
 class DeleteBlogForm(forms.Form):
-    delete_blog = forms.BooleanField(widget=forms.HiddenInput, initial=True)
+    confirm = forms.BooleanField(label="Confirmer la suppression")
 
 
 class FollowUsersForm(forms.ModelForm):
