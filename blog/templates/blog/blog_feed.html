@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2 class="mb-4">📸 Flux de blogs</h2>
+
+  <form method="get" class="mb-4">
+    <select name="categorie" onchange="this.form.submit()" class="form-select w-auto">
+      <option value="">Toutes les catégories</option>
+      {% for cat in categories %}
+        <option value="{{ cat.id }}" {% if request.GET.categorie == cat.id|stringformat:"s" %}selected{% endif %}>
+          {{ cat.name }}
+        </option>
+      {% endfor %}
+    </select>
+  </form>
+
+  <div class="row g-4">
+    {% if page_obj %}
+      {% for blog in page_obj %}
+        <div class="col-md-6">
+          <div class="card h-100">
+            {% if blog.photo %}
+              <img src="{{ blog.photo.image.url }}" class="card-img-top" alt="{{ blog.photo.caption }}">
+            {% endif %}
+            <div class="card-body">
+              <h5 class="card-title">{{ blog.title }}</h5>
+              <p class="card-text">{{ blog.content|truncatewords:25 }}</p>
+              <p><strong>Catégories :</strong>
+                {% for cat in blog.categories.all %}
+                  <span class="badge bg-secondary">{{ cat.name }}</span>
+                {% empty %}
+                  <span class="text-muted">Aucune</span>
+                {% endfor %}
+              </p>
+              <p><em>Par {{ blog.author.username }} le {{ blog.date_created|date:"d/m/Y" }}</em></p>
+              <a href="{% url 'view_blog' blog.id %}" class="btn btn-outline-primary btn-sm">Lire plus</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>Aucun blog à afficher pour l’instant.</p>
+    {% endif %}
+  </div>
+
+  {% include 'blog/partials/pagination.html' %}
+{% endblock content %}

@@ -6,7 +6,10 @@ urlpatterns = [
     path('photo/<int:photo_id>/', views.view_photo, name='view_photo'),
     path('photo/<int:photo_id>/edit/', views.edit_photo, name='edit_photo'),
     path('photo/<int:photo_id>/delete/', views.delete_photo, name='delete_photo'),
-    
+    path('comment/<int:comment_id>/edit/', views.edit_comment, name='edit_comment'),
+    path('comment/<int:comment_id>/delete/', views.delete_comment, name='delete_comment'),
+    path('blog/<int:blog_id>/edit/', views.edit_blog, name='edit_blog'),
+
     path('admin-panel/', views.admin_panel, name='admin_panel'),
     path('admin-panel/users/', views.admin_users, name='admin_users'),
     path('admin-panel/users/delete/<int:user_id>/', views.admin_delete_user, name='admin_delete_user'),

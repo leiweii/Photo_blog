@@ -1,0 +1,146 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar améliorée avec Bootstrap look */
+.sidebar {
+    height: 100vh;
+    width: 220px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom right, #3e5f64, #ff6f61, #cbbf65);
+    color: #fff;
+    overflow-y: auto;
+    padding: 1rem;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    margin: 8px 0;
+    padding: 6px 8px;
+    border-radius: 4px;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255,255,255,0.2);
+    color: #ffffff;
+}
+
+.main {
+    margin-left: 240px;
+    padding: 2rem;
+}
+
+/* Avatar */
+.avatar {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 1rem auto;
+}
+
+/* Navbar */
+/* .navbar {
+    background: #fff;
+    padding: 10px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.navbar a:hover {
+    background: #f0f0f0;
+} */
+  
+
+/* Grille photo */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.post img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Formulaire "suivre un utilisateur" amélioré */
+.follow-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+}
+
+.follow-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.follow-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.follow-container input,
+.follow-container select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.follow-container input:focus,
+.follow-container select:focus {
+    border-color: #0d6efd;
+    outline: none;
+}
+
+.follow-container input[type="checkbox"] {
+    accent-color: #0d6efd;
+    width: 16px;
+    height: 16px;
+}
+
+.follow-container button {
+    padding: 10px;
+    background-color: #0d6efd;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.follow-container button:hover {
+    background-color: #084dc4;
+}

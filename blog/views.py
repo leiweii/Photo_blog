@@ -19,7 +19,11 @@ from .forms import CommentaireForm
 from django.contrib.contenttypes.models import ContentType
 from .models import Blog, Commentaire
 from .forms import CommentaireForm
-
+from django.contrib.contenttypes.models import ContentType
+from django.core.exceptions import PermissionDenied
+from django.shortcuts import get_object_or_404, redirect, render
+from .models import Commentaire
+from .forms import CommentaireForm
 
 @staff_member_required
 def admin_panel(request):
@@ -68,6 +72,34 @@ def blog_and_photo_upload(request):
 
 
 
+@login_required
+def edit_blog(request, blog_id):
+    blog = get_object_or_404(models.Blog, id=blog_id)
+
+    # ✅ Vérifie si l'utilisateur est bien l'auteur
+    if blog.author != request.user:
+        raise PermissionDenied  # Affiche une erreur 403
+
+    edit_form = forms.BlogForm(instance=blog)
+    delete_form = forms.DeleteBlogForm()
+
+    if request.method == 'POST':
+        if 'edit_blog' in request.POST:
+            edit_form = forms.BlogForm(request.POST, instance=blog)
+            if edit_form.is_valid():
+                edit_form.save()
+                return redirect('home')
+        elif 'delete_blog' in request.POST:
+            delete_form = forms.DeleteBlogForm(request.POST)
+            if delete_form.is_valid():
+                blog.delete()
+                return redirect('home')
+
+    context = {
+        'edit_form': edit_form,
+        'delete_form': delete_form,
+    }
+    return render(request, 'blog/edit_blog.html', context=context)
 
 
 @login_required
@@ -195,60 +227,49 @@ def photo_feed(request):
     categorie_id = request.GET.get('categorie')
     categories = models.Categorie.objects.all()
 
-    # Récupérer les photos des créateurs suivis
+    # Photos des créateurs suivis
     photos = models.Photo.objects.filter(
         uploader__in=request.user.follows.all()
     )
 
-    # Si un filtre de catégorie est appliqué
+    # 🔁 Filtrer par catégorie (ManyToMany)
     if categorie_id:
-        photos = photos.filter(categorie_id=categorie_id)
+        photos = photos.filter(categories__id=categorie_id)
 
-    # Tri par date décroissante
     photos = photos.order_by('-date_created')
 
-    # Pagination
     paginator = Paginator(photos, 6)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
-    context = {
+    return render(request, 'blog/photo_feed.html', {
         'page_obj': page_obj,
         'categories': categories,
-    }
-
-    return render(request, 'blog/photo_feed.html', context=context)
-
+    })
 
 @login_required
-def edit_blog(request, blog_id):
-    blog = get_object_or_404(models.Blog, id=blog_id)
+def blog_feed(request):
+    categorie_id = request.GET.get('categorie')
+    categories = models.Categorie.objects.all()
 
-    # ✅ Vérifie si l'utilisateur est bien l'auteur
-    if blog.author != request.user:
-        raise PermissionDenied  # Affiche une erreur 403
+    # Blogs des créateurs suivis
+    blogs = models.Blog.objects.filter(
+        author__in=request.user.follows.all()
+    )
 
-    edit_form = forms.BlogForm(instance=blog)
-    delete_form = forms.DeleteBlogForm()
+    if categorie_id:
+        blogs = blogs.filter(categories__id=categorie_id)
 
-    if request.method == 'POST':
-        if 'edit_blog' in request.POST:
-            edit_form = forms.BlogForm(request.POST, instance=blog)
-            if edit_form.is_valid():
-                edit_form.save()
-                return redirect('home')
-        elif 'delete_blog' in request.POST:
-            delete_form = forms.DeleteBlogForm(request.POST)
-            if delete_form.is_valid():
-                blog.delete()
-                return redirect('home')
+    blogs = blogs.order_by('-date_created')
 
-    context = {
-        'edit_form': edit_form,
-        'delete_form': delete_form,
-    }
-    return render(request, 'blog/edit_blog.html', context=context)
+    paginator = Paginator(blogs, 6)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
 
+    return render(request, 'blog/blog_feed.html', {
+        'page_obj': page_obj,
+        'categories': categories,
+    })
 
 
 @login_required
@@ -365,7 +386,49 @@ def admin_delete_category(request, cat_id):
 
 
 
+@login_required
+def edit_comment(request, comment_id):
+    comment = get_object_or_404(Commentaire, id=comment_id)
 
+    if comment.user != request.user:
+        raise PermissionDenied
+
+    form = CommentaireForm(instance=comment)
+
+    if request.method == 'POST':
+        form = CommentaireForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            if comment.content_type.model == "photo":
+                return redirect('view_photo', photo_id=comment.object_id)
+            else:
+                return redirect('view_blog', blog_id=comment.object_id)
+
+    return render(request, 'blog/edit_comment.html', {'form': form, 'comment': comment})
+
+
+@login_required
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Commentaire, id=comment_id)
+
+    if comment.content_type.model == 'photo':
+        related_object = get_object_or_404(Photo, id=comment.object_id)
+        author = related_object.uploader
+    else:
+        related_object = get_object_or_404(Blog, id=comment.object_id)
+        author = related_object.author
+
+    if author != request.user:
+        raise PermissionDenied
+
+    if request.method == 'POST':
+        comment.delete()
+        if comment.content_type.model == 'photo':
+            return redirect('view_photo', photo_id=related_object.id)
+        else:
+            return redirect('view_blog', blog_id=related_object.id)
+
+    return render(request, 'blog/delete_comment.html', {'comment': comment})
 
 
 def contact(request):

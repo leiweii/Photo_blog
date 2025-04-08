@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>🗑 Supprimer le commentaire</h2>
+  <p><strong>{{ comment.user.username }}</strong> : {{ comment.text }}</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Oui, supprimer</button>
+    <a href="{% if comment.content_type.model == 'photo' %}{% url 'view_photo' comment.object_id %}{% else %}{% url 'view_blog' comment.object_id %}{% endif %}">Annuler</a>
+  </form>
+{% endblock %}

@@ -3,17 +3,7 @@
 
 <form method="post" enctype="multipart/form-data">
   {% csrf_token %}
-
-  <label for="id_image">Image :</label>
-  {{ form.image }}
-
-  <label for="id_caption">Légende :</label>
-  {{ form.caption }}
-
-  <label for="id_categorie">Catégorie :</label>
-  {{ form.categorie }}
-
-  <br /><br />
+  {{ form.as_p }}
   <button type="submit">Publier</button>
 </form>
 

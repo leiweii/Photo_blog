@@ -29,12 +29,12 @@ urlpatterns = [
     path('logout/', authentication.views.logout_user, name='logout'),
     path('home/', blog.views.home, name='home'),
     path('photo-feed/', blog.views.photo_feed, name='photo_feed'),
+    path('blog-feed/', blog.views.blog_feed, name='blog_feed'),
+
     path('', LoginView.as_view(
             template_name='authentication/login.html',
             redirect_authenticated_user=True),
         name='login'),
-
-    # path('', authentication.views.LoginPageView.as_view(), name='login'),
 
     path('change-password/', PasswordChangeView.as_view(
         template_name='authentication/Cmdp.html'),
@@ -46,22 +46,11 @@ urlpatterns = [
          ),
 
     path('signup/', authentication.views.signup_page, name='signup'),
-
-    # path('photo/upload/', blog.views.photo_upload, name='photo_upload'),
-
     path('profile-photo/upload', authentication.views.upload_profile_photo, name='upload_profile_photo'),
-
     path('blog/create', blog.views.blog_and_photo_upload, name='blog_create'),
-
     path('blog/<int:blog_id>', blog.views.view_blog, name='view_blog'),
-    # path('photos/<int:photo_id>/', blog.views.view_photo, name='view_photo'),
-
-    path('blog/<int:blog_id>/edit', blog.views.edit_blog, name='edit_blog'),
-
     path('photo/upload-multiple/', blog.views.create_multiple_photos, name='create_multiple_photos'),
-
     path('follow-users/', blog.views.follow_users, name='follow_users'),
-
     path('about-us/', blog.views.about, name='about'),
     path('contact-us/', blog.views.contact, name='contact'),
     path('confirmation/', blog.views.confirmation, name='confirmation'),

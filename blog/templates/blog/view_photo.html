@@ -1,27 +1,43 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
+
 <h2>{{ photo.caption }}</h2>
 <img src="{{ photo.image.url }}" width="400" />
 <a href="{{ photo.image.url }}" download>Télécharger la photo</a>
 
 {% if request.user == photo.uploader %}
-<p><a href="{% url 'edit_photo' photo.id %}">Modifier</a></p>
-<form method="post" action="{% url 'delete_photo' photo.id %}">
-  {% csrf_token %}
-  <button type="submit">Supprimer</button>
-</form>
+  <p><a href="{% url 'edit_photo' photo.id %}">Modifier</a></p>
+  <form method="post" action="{% url 'delete_photo' photo.id %}">
+    {% csrf_token %}
+    <button type="submit">Supprimer</button>
+  </form>
 {% endif %}
 
+<hr />
 <h3>Commentaires</h3>
+
 <ul>
   {% for comment in comments %}
-  <li>
-    {{ comment.user.username }} : {{ comment.text }} ({{ comment.created_at }})
-  </li>
+    <li>
+      <strong>{{ comment.user.username }}</strong> : {{ comment.text }}
+      <small class="text-muted">({{ comment.created_at }})</small><br />
+
+      {% if comment.user == request.user %}
+        <a href="{% url 'edit_comment' comment.id %}">✏️ Modifier</a>
+      {% endif %}
+
+      {% if request.user == photo.uploader %}
+        <a href="{% url 'delete_comment' comment.id %}">🗑 Supprimer</a>
+      {% endif %}
+    </li>
+  {% empty %}
+    <li>Aucun commentaire pour l’instant.</li>
   {% endfor %}
 </ul>
 
 <form method="post">
-  {% csrf_token %} {{ comment_form.as_p }}
+  {% csrf_token %}
+  {{ comment_form.as_p }}
   <button type="submit">Envoyer</button>
 </form>
 

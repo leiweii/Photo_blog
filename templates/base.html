@@ -1,128 +1,112 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="fr">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <title>Photo Blog</title>
+    <title>Blog photo</title>
 
-    <!-- ✅ Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'style/style.css' %}" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
     />
-
-    <!-- ✅ Ton CSS personnalisé -->
-    {% comment %} <link rel="stylesheet" href="{% static 'style/style.css' %}" /> {% endcomment %}
   </head>
-  <body>
-    <!-- ✅ Barre de navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'home' %}">📷 PhotoBlog</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">À propos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-            </li>
-            {% if request.user.is_staff %}
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'admin_panel' %}">Admin Panel</a>
-              </li>
-            {% endif %}
-            {% if user.is_authenticated %}
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'logout' %}">Se déconnecter</a>
-              </li>
-            {% else %}
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'login' %}">Se connecter</a>
-              </li>
-            {% endif %}
-          </ul>
-        </div>
-      </div>
-    </nav>
-
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm">
     <div class="container-fluid">
-      <div class="row">
-        <!-- ✅ Barre latérale -->
-        <aside class="col-md-3 mb-4">
-          <div class="card p-3">
-            <h5 class="card-title">👤 Utilisateur</h5>
-
-            {% if user.is_authenticated %}
-              <p><strong>{{ user.username }}</strong></p>
-
-              {% if user.profile_photo %}
-                <img src="{{ user.profile_photo.url }}" class="img-thumbnail mb-2" alt="Photo de profil" />
-              {% else %}
-                <img src="{% static 'image/default_profile.png' %}" class="img-thumbnail mb-2" alt="Profil par défaut" />
-              {% endif %}
-
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a href="{% url 'home' %}">🏠 Accueil</a></li>
-                <li class="list-group-item"><a href="{% url 'photo_feed' %}">🖼️ Flux de photos</a></li>
-
-                {% if perms.blog.add_blog %}
-                  <li class="list-group-item"><a href="{% url 'blog_create' %}">📝 Écrire un blog</a></li>
-                {% endif %}
-                {% if perms.blog.add_photo %}
-                  <li class="list-group-item"><a href="{% url 'photo_upload' %}">📤 Télécharger une photo</a></li>
-                  <li class="list-group-item"><a href="{% url 'create_multiple_photos' %}">📥 Photos multiples</a></li>
-                {% endif %}
-
-                <li class="list-group-item"><a href="{% url 'follow_users' %}">👥 Suivre des photographes</a></li>
-                <li class="list-group-item"><a href="{% url 'upload_profile_photo' %}">📸 Changer la photo de profil</a></li>
-                <li class="list-group-item"><a href="{% url 'password_change' %}">🔐 Changer le mot de passe</a></li>
-                <li class="list-group-item"><a href="{% url 'logout' %}">🚪 Déconnexion</a></li>
-              </ul>
-
-            {% else %}
-              <div id="dynamic-content"></div>
-              <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                  var images = [
-                    "{% static 'image/default_profile.png' %}",
-                    "{% static 'image/4.jpg' %}",
-                    "{% static 'image/5.jpg' %}",
-                    "{% static 'image/6.jpg' %}",
-                    "{% static 'image/7.jpg' %}",
-                    "{% static 'image/Tan.jpg' %}",
-                    "{% static 'image/2.jpeg' %}",
-                    "{% static 'image/3.jpg' %}",
-                  ];
-                  var randomImage = images[Math.floor(Math.random() * images.length)];
-                  var imgElement = document.createElement("img");
-                  imgElement.src = randomImage;
-                  imgElement.alt = "Photo aléatoire";
-                  imgElement.className = "img-fluid";
-                  document.getElementById("dynamic-content").appendChild(imgElement);
-                });
-              </script>
-            {% endif %}
-          </div>
-        </aside>
-
-        <!-- ✅ Contenu principal -->
-        <main class="col-md-9">
-          {% block content %}
-          {% endblock %}
-        </main>
+      <a class="navbar-brand fw-bold text-primary" href="{% url 'home' %}">PhotoBlog</a>
+  
+      <div class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav gap-2">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="{% url 'about' %}">À propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="{% url 'contact' %}">Contact</a>
+          </li>
+          {% if request.user.is_staff %}
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="{% url 'admin_panel' %}">Admin</a>
+          </li>
+          {% endif %}
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link text-danger" href="{% url 'logout' %}">Se déconnecter</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="{% url 'login' %}">Se connecter</a>
+          </li>
+          {% endif %}
+        </ul>
       </div>
     </div>
-
-    <!-- ✅ Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </nav>
+  
+   
+    
+    <div class="sidebar">
+      <h1>Photo blog</h1>
+      {% if user.is_authenticated %}
+      <p>Salut, {{ user }} -ʕ•̫͡• ʔ•̫͡•ཻʕ•̫͡•ʔ•͓͡•ʔ-</p>
+      {% if user.profile_photo %}
+      <img
+        class="avatar"
+        src="{{ user.profile_photo.url }}"
+        alt="Profile Photo"
+      />
+      {% else %}
+      <img
+        class="avatar"
+        src="{% static 'image/default_profile.png' %}"
+        alt="Default Profile Photo"
+      />
+      {% endif %}
+      <p><a href="{% url 'home' %}">Accueil</a></p>
+      <p><a href="{% url 'photo_feed' %}">Flux de photos</a></p>
+      <p><a href="{% url 'blog_feed' %}">Flux de blogs</a></p>
+      {% if perms.blog.add_blog %}
+      <p><a href="{% url 'blog_create' %}">Écrire un blog</a></p>
+      {% endif %} {% if perms.blog.add_photo %}
+      <p><a href="{% url 'photo_upload' %}">Télécharger une photo</a></p>
+      <p>
+        <a href="{% url 'create_multiple_photos' %}"
+          >Télécharger plusieurs photos</a
+        >
+      </p>
+      {% endif %}
+      <p><a href="{% url 'follow_users' %}">Suivre des utilisateurs</a></p>
+      <p>
+        <a href="{% url 'upload_profile_photo' %}"
+          >Changer la photo de profil</a
+        >
+      </p>
+      <p><a href="{% url 'password_change' %}">Changer le mot de passe</a></p>
+      <p><a href="{% url 'logout' %}">Se déconnecter</a></p>
+      {% else %}
+      <div id="dynamic-content"></div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var images = [
+            "{% static 'image/default_profile.png' %}",
+            "{% static 'image/4.jpg' %}",
+            "{% static 'image/5.jpg' %}",
+            "{% static 'image/6.jpg' %}",
+            "{% static 'image/7.jpg' %}",
+            "{% static 'image/Tan.jpg' %}",
+            "{% static 'image/2.jpeg' %}",
+            "{% static 'image/3.jpg' %}",
+          ];
+          var randomImage = images[Math.floor(Math.random() * images.length)];
+          var imgElement = document.createElement("img");
+          imgElement.src = randomImage;
+          imgElement.alt = "Random Photo";
+          imgElement.style.width = "100%";
+          document.getElementById("dynamic-content").appendChild(imgElement);
+        });
+      </script>
+      {% endif %}
+    </div>
+    <div class="main">{% block content %}{% endblock content %}</div>
   </body>
 </html>

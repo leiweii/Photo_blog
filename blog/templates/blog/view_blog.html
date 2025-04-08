@@ -1,36 +1,73 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2>{{ photo.caption }}</h2>
-<img src="{{ photo.image.url }}" class="img-fluid mb-3" alt="{{ photo.caption }}">
 
-<p>Par <strong>{{ photo.uploader.username }}</strong></p>
-<p>Publié le {{ photo.date_created }}</p>
+<h2>{{ blog.title }}</h2>
 
-{% if request.user == photo.uploader %}
-  <a href="{% url 'edit_photo' photo.id %}" class="btn btn-sm btn-outline-secondary">Modifier</a>
-  <a href="{% url 'delete_photo' photo.id %}" class="btn btn-sm btn-outline-danger">Supprimer</a>
-{% else %}
-  <a href="{{ photo.image.url }}" download class="btn btn-sm btn-primary">Télécharger</a>
+{% if blog.photo %}
+  <img src="{{ blog.photo.image.url }}" class="img-fluid mb-3" alt="{{ blog.photo.caption }}">
+{% endif %}
+
+<p><strong>Par :</strong> {{ blog.author.username }}</p>
+<p><strong>Contributeurs :</strong>
+  {% for contributor in blog.contributors.all %}
+    {{ contributor.username }}{% if not forloop.last %}, {% endif %}
+  {% empty %}
+    Aucun
+  {% endfor %}
+</p>
+
+<p><strong>Date :</strong> {{ blog.date_created|date:"d/m/Y H:i" }}</p>
+
+<p><strong>Catégories :</strong>
+  {% for cat in blog.categories.all %}
+    <span class="badge bg-secondary">{{ cat.name }}</span>
+  {% empty %}
+    <span class="text-muted">Aucune</span>
+  {% endfor %}
+</p>
+
+<hr>
+<div class="mb-4">
+  <p>{{ blog.content|linebreaks }}</p>
+</div>
+
+{% if request.user == blog.author %}
+  <a href="{% url 'edit_blog' blog.id %}" class="btn btn-sm btn-outline-secondary">✏️ Modifier</a>
+  <form method="post" action="{% url 'edit_blog' blog.id %}" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit" name="delete_blog" class="btn btn-sm btn-outline-danger">🗑 Supprimer</button>
+  </form>
 {% endif %}
 
 <hr>
-<h4>Commentaires</h4>
+<h4>💬 Commentaires</h4>
 
 <ul class="list-group mb-3">
-    {% for comment in comments %}
-        <li class="list-group-item">
-            <strong>{{ comment.user.username }}</strong><br />
-            {{ comment.text }}<br />
-            <small class="text-muted">{{ comment.created_at }}</small>
-        </li>
-    {% empty %}
-        <li class="list-group-item">Aucun commentaire pour l'instant.</li>
-    {% endfor %}
+  {% for comment in comments %}
+    <li class="list-group-item">
+      <strong>{{ comment.user.username }}</strong><br />
+      {{ comment.text }}<br />
+      <small class="text-muted">{{ comment.created_at|date:"d/m/Y H:i" }}</small><br />
+
+      {% if comment.user == request.user %}
+        <a href="{% url 'edit_comment' comment.id %}">✏️ Modifier</a>
+      {% endif %}
+
+      {% if request.user == blog.author %}
+        <a href="{% url 'delete_comment' comment.id %}">🗑 Supprimer</a>
+      {% endif %}
+    </li>
+  {% empty %}
+    <li class="list-group-item">Aucun commentaire pour l'instant.</li>
+  {% endfor %}
 </ul>
 
 <form method="post">
-    {% csrf_token %}
-    {{ comment_form.as_p }}
-    <button type="submit" class="btn btn-primary">Commenter</button>
+  {% csrf_token %}
+  {{ comment_form.as_p }}
+  <button type="submit" class="btn btn-primary">Commenter</button>
 </form>
+
+<a href="{% url 'blog_feed' %}" class="btn btn-link mt-4">⬅ Retour au flux de blogs</a>
+
 {% endblock %}
