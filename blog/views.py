@@ -5,15 +5,20 @@ from django.contrib.auth import get_user_model
 from django.core.exceptions import PermissionDenied
 from django.core.mail import send_mail
 from django.core.paginator import Paginator
-from django.db.models import Q
 from django.forms import formset_factory
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.contenttypes.models import ContentType
-from itertools import chain
+from django.conf import settings
+from django.contrib import messages
+
 # Imports internes au projet
 from . import forms, models
-from .forms import CategoryForm, CommentaireForm, ContactUsForm
+from .forms import CategoryForm, CommentaireForm, ContactForm
 from .models import Blog, Commentaire, Photo
+
+
+def home(request):
+    return render(request, 'blog/home.html')
 
 
 @staff_member_required
@@ -31,7 +36,8 @@ def photo_upload(request):
             photo = form.save(commit=False)
             photo.uploader = request.user
             photo.save()
-            return redirect('home')
+            form.save_m2m()
+            return redirect('photo_feed')
     return render(request, 'blog/photo_upload.html', context={'form': form})
 
 
@@ -174,41 +180,6 @@ def delete_photo(request, photo_id):
         return redirect('home')
 
     return render(request, 'blog/delete_photo.html', {'photo': photo})
-
-
-
-def home(request):
-    follows = request.user.follows.all()  # Récupération des utilisateurs suivis par l'utilisateur actuel
-    # Récupération des blogs auxquels l'utilisateur est abonné ou qui sont marqués comme favoris
-    blogs = models.Blog.objects.filter(
-        Q(contributors__in=follows) | Q(starred=True)
-    )
-    # Récupération des photos téléchargées par les utilisateurs suivis, mais qui ne sont pas liées à des blogs déjà récupérés
-    photos = models.Photo.objects.filter(
-        uploader__in=follows
-    ).exclude(
-        blog__in=blogs
-    )
-    # Fusion des blogs et des photos, triés par date de création
-    blogs_and_photos = sorted(
-        chain(blogs, photos),
-        key=lambda instance: instance.date_created,
-        reverse=True
-    )
-    
-    paginator = Paginator(blogs_and_photos, 6)
-
-    # Récupération du numéro de page à afficher à partir des paramètres de requête
-    page_number = request.GET.get('page')
-    
-    # Obtention de l'objet de page pour le numéro de page spécifié
-    page_obj = paginator.get_page(page_number)
-    
-    # Contexte à passer au modèle pour le rendu
-    context = {'page_obj': page_obj}
-    
-    # Rendu de la page d'accueil avec le contexte spécifié
-    return render(request, 'blog/home.html', context=context)
 
 
 
@@ -421,28 +392,26 @@ def delete_comment(request, comment_id):
     return render(request, 'blog/delete_comment.html', {'comment': comment})
 
 
-def contact(request):
+def contact_view(request):
     if request.method == 'POST':
-        # créer une instance de notre formulaire et le remplir avec les données POST
-        form = ContactUsForm(request.POST)
-
+        form = ContactForm(request.POST)
         if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+
+            full_message = f"Message de {name} <{email}>\n\n{message}"
+
             send_mail(
-                subject=f'Message from {form.cleaned_data["Nom"] or "anonyme"} via MerchEx Contact Us form',
-                message=form.cleaned_data['message'],
-                from_email=form.cleaned_data['email'],
-                recipient_list=['shileiwei200@gmail.com'],
+                subject,
+                full_message,
+                settings.DEFAULT_FROM_EMAIL,
+                [settings.CONTACT_EMAIL],  # tu définiras ça dans settings.py
             )
-            # Rediriger vers une page de remerciement ou afficher un message de succès
-            return redirect('confirmation')  # remplacez 'confirmation' par l'URL appropriée
+            messages.success(request, "Votre message a bien été envoyé.")
+            return redirect('contact')
     else:
-        # ceci doit être une requête GET, donc créer un formulaire vide
-        form = ContactUsForm()
+        form = ContactForm()
 
     return render(request, 'blog/contact.html', {'form': form})
-
-def confirmation(request):
-    return render(request, 'blog/confirmation.html')
-
-
-

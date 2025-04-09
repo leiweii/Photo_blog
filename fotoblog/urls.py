@@ -27,11 +27,11 @@ import blog.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('logout/', authentication.views.logout_user, name='logout'),
-    path('home/', blog.views.home, name='home'),
+    path('', blog.views.home, name='home'),
     path('photo-feed/', blog.views.photo_feed, name='photo_feed'),
     path('blog-feed/', blog.views.blog_feed, name='blog_feed'),
 
-    path('', LoginView.as_view(
+    path('login/', LoginView.as_view(
             template_name='authentication/login.html',
             redirect_authenticated_user=True),
         name='login'),
@@ -52,8 +52,7 @@ urlpatterns = [
     path('photo/upload-multiple/', blog.views.create_multiple_photos, name='create_multiple_photos'),
     path('follow-users/', blog.views.follow_users, name='follow_users'),
     path('about-us/', blog.views.about, name='about'),
-    path('contact-us/', blog.views.contact, name='contact'),
-    path('confirmation/', blog.views.confirmation, name='confirmation'),
+    path('contact/', blog.views.contact_view, name='contact'),
     path('auth/', include('authentication.urls')),
     path('', include('blog.urls')),
 ]

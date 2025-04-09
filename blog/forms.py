@@ -57,7 +57,8 @@ class CommentaireForm(forms.ModelForm):
             'text': forms.Textarea(attrs={'rows': 2, 'class': 'form-control', 'placeholder': 'Laisser un commentaire...'}),
         }
 
-class ContactUsForm(forms.Form):
-    Nom = forms.CharField(required=False)
-    email = forms.CharField()
-    message = forms.CharField(max_length=1000)
+class ContactForm(forms.Form):
+    name = forms.CharField(label='Nom', max_length=100)
+    email = forms.EmailField(label='Email')
+    subject = forms.CharField(label='Sujet', max_length=150)
+    message = forms.CharField(label='Message', widget=forms.Textarea)

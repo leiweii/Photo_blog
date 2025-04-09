@@ -1,14 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Contactez-nous</h1>
-<p>Nous sommes là pour vous aider </p>
-<p>Merci de nous laisser un message.</p>
+<div class="container mt-5">
+  <h2>📩 Contactez-nous</h2>
 
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-success">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
 
-<form action="" method="post" novalidate>
-{% csrf_token %}
-{{ form.as_p }}
-<input type="submit" value="Envoyer">
-</form>
-{% endblock content %}
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+  </form>
+</div>
+
+{% endblock %}
+

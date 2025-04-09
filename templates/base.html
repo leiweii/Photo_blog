@@ -14,9 +14,7 @@
   </head>
   <nav class="navbar navbar-expand-lg bg-white shadow-sm">
     <div class="container-fluid">
-      <a class="navbar-brand fs-3 fw-bold text-dark" href="{% url 'home' %}">
-        📸 <span style="color: #0d6efd;">Photo</span><span style="color: #6c757d;">Blog</span>
-      </a>      
+      <a class="navbar-brand fw-bold text-primary" href="{% url 'home' %}">PhotoBlog</a>
   
       <div class="collapse navbar-collapse justify-content-end">
         <ul class="navbar-nav gap-2">
@@ -25,8 +23,11 @@
             <a class="nav-link text-dark" href="{% url 'admin_panel' %}">Admin</a>
           </li>
           {% endif %}
+          <li class="nav-item"><a class="nav-link text-dark" href="{% url 'home' %}">Accueil</a></li>
+          {% if user.is_authenticated %}
           <li class="nav-item"><a class="nav-link text-dark" href="{% url 'photo_feed' %}">Flux de photos</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="{% url 'blog_feed' %}">Flux de blogs</a></li>
+          {% endif %}
           <li class="nav-item"><a class="nav-link text-dark" href="{% url 'about' %}">À propos</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="{% url 'contact' %}">Contact</a></li>
           {% if user.is_authenticated %}
@@ -46,9 +47,9 @@
    
     
     <div class="sidebar">
-      <h1>Photo blog</h1>
+      <h1><a href="{% url 'home' %}" style="text-decoration: none; color: inherit;">Photo blog</a></h1>
       {% if user.is_authenticated %}
-      <p>Salut, {{ user }} -ʕ•̫͡• ʔ•̫͡•ཻʕ•̫͡•ʔ•͓͡•ʔ-</p>
+      <p>Salut, "{{ user }}" -ʕ•̫͡•ʔ•̫͡•ཻʕ•̫͡•ʔ•͓͡•ʔ-</p>
       {% if user.profile_photo %}
       <img
         class="avatar"

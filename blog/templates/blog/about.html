@@ -1,8 +1,52 @@
 {% extends 'base.html' %}
 {% block content %}
 
-        
-<h1>À propos de nous</h1>
-<p>Bienvenue sur blog photo!</p>
+<div class="container mt-5">
+  <div class="text-center">
+    <h1 class="display-4">À propos de nous 📷</h1>
+    <p class="lead">Nous sommes un collectif passionné par la photographie et le partage artistique.</p>
+  </div>
 
-{% endblock content %}
+  <hr class="my-4">
+
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h2>Notre vision</h2>
+      <p>
+        Notre collectif regroupe des photographes de tous horizons, unis par l'envie de partager nos clichés et nos histoires.
+        Nous croyons en une photographie libre, accessible et humaine.
+        Cette plateforme a été créée pour donner à chaque créateur un espace de publication et aux visiteurs une immersion visuelle unique.
+      </p>
+    </div>
+    <div class="col-md-6">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=60" class="img-fluid rounded shadow" alt="Collectif de photographes">
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-md-6 order-md-2">
+      <h2>Notre mission</h2>
+      <p>
+        Offrir aux créateurs un outil simple et puissant pour :
+        <ul>
+          <li>Publier leurs œuvres</li>
+          <li>Écrire des blogs sur leurs expériences</li>
+          <li>Interagir avec une communauté de passionnés</li>
+        </ul>
+        Et permettre aux abonnés de suivre, commenter, et s'inspirer librement.
+      </p>
+    </div>
+    <div class="col-md-6 order-md-1">
+      <img src="https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&w=800&q=60" class="img-fluid rounded shadow" alt="Partage de photos">
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <div class="text-center">
+    <h3>🫱🏼‍🫲 Rejoignez-nous</h3>
+    <p>Faites partie de notre aventure photographique. Explorez, exprimez, échangez.</p>
+  </div>
+</div>
+
+{% endblock %}
