@@ -1,8 +1,215 @@
-[2025-04-09 10:36:11,501] INFO | Watching for file changes with StatReloader
-[2025-04-09 10:36:40,456] INFO | Début de requête: {"method": "GET", "path": "/logout/", "user": "Laurent", "ip_address": "127.0.0.1"}
-[2025-04-09 10:36:40,505] INFO | Fin de requête: {"status_code": 302, "duration": "0.0636 secondes", "method": "GET", "path": "/logout/", "user": "Laurent", "ip_address": "127.0.0.1"}
-[2025-04-09 10:36:40,507] INFO | "GET /logout/ HTTP/1.1" 302 0
-[2025-04-09 10:36:40,528] INFO | Début de requête: {"method": "GET", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
-[2025-04-09 10:36:40,607] INFO | Fin de requête: {"status_code": 200, "duration": "0.0791 secondes", "method": "GET", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
-[2025-04-09 10:36:40,607] INFO | "GET /login/ HTTP/1.1" 200 2966
-[2025-04-09 10:36:40,653] INFO | "GET /static/style/style.css HTTP/1.1" 304 0
+[2025-04-09 11:03:52,205] INFO | Watching for file changes with StatReloader
+[2025-04-09 11:04:14,730] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/compte/connexion/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:14,744] ERROR | Requï¿½te avec erreur: {"status_code": 404, "duration": "0.0139 secondes", "method": "GET", "path": "/compte/connexion/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:14,744] WARNING | Not Found: /compte/connexion/
+[2025-04-09 11:04:14,744] WARNING | "GET /compte/connexion/ HTTP/1.1" 404 8149
+[2025-04-09 11:04:14,973] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/compte/connexion/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:14,981] ERROR | Requï¿½te avec erreur: {"status_code": 404, "duration": "0.0087 secondes", "method": "GET", "path": "/compte/connexion/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:14,982] WARNING | Not Found: /compte/connexion/
+[2025-04-09 11:04:14,982] WARNING | "GET /compte/connexion/ HTTP/1.1" 404 8149
+[2025-04-09 11:04:15,157] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/compte/connexion/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:15,173] ERROR | Requï¿½te avec erreur: {"status_code": 404, "duration": "0.0156 secondes", "method": "GET", "path": "/compte/connexion/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:15,173] WARNING | Not Found: /compte/connexion/
+[2025-04-09 11:04:15,179] WARNING | "GET /compte/connexion/ HTTP/1.1" 404 8149
+[2025-04-09 11:04:19,850] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:19,868] INFO | Fin de requï¿½te: {"status_code": 200, "duration": "0.0178 secondes", "method": "GET", "path": "/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:19,869] INFO | "GET / HTTP/1.1" 200 4313
+[2025-04-09 11:04:23,907] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:23,951] INFO | Fin de requï¿½te: {"status_code": 200, "duration": "0.0445 secondes", "method": "GET", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:23,951] INFO | "GET /login/ HTTP/1.1" 200 2966
+[2025-04-09 11:04:28,685] INFO | Dï¿½but de requï¿½te: {"method": "POST", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:29,368] INFO | Fin de requï¿½te: {"status_code": 302, "duration": "0.6942 secondes", "method": "POST", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:29,374] INFO | "POST /login/ HTTP/1.1" 302 0
+[2025-04-09 11:04:29,374] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:29,374] INFO | Fin de requï¿½te: {"status_code": 200, "duration": "0.0000 secondes", "method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:29,374] INFO | "GET / HTTP/1.1" 200 4694
+[2025-04-09 11:04:34,669] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:34,669] INFO | Fin de requï¿½te: {"status_code": 200, "duration": "0.0030 secondes", "method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:34,672] INFO | "GET / HTTP/1.1" 200 4694
+[2025-04-09 11:04:35,650] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:35,674] INFO | Fin de requï¿½te: {"status_code": 200, "duration": "0.0261 secondes", "method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:35,674] INFO | "GET /photo-feed/ HTTP/1.1" 200 5740
+[2025-04-09 11:04:35,718] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/media/8_SzeQfUh.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:35,721] INFO | Fin de requï¿½te: {"status_code": 304, "duration": "0.0075 secondes", "method": "GET", "path": "/media/8_SzeQfUh.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:35,722] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/media/6_dYfwEga.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:35,723] INFO | "GET /media/8_SzeQfUh.jpg HTTP/1.1" 304 0
+[2025-04-09 11:04:35,723] INFO | Fin de requï¿½te: {"status_code": 304, "duration": "0.0083 secondes", "method": "GET", "path": "/media/6_dYfwEga.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:35,724] INFO | "GET /media/6_dYfwEga.jpg HTTP/1.1" 304 0
+[2025-04-09 11:04:35,755] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/media/10.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:35,756] INFO | Fin de requï¿½te: {"status_code": 304, "duration": "0.0186 secondes", "method": "GET", "path": "/media/10.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:35,757] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/media/7_wWxL5r0.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:35,760] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/media/9_4WTKWkM.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:35,760] INFO | Fin de requï¿½te: {"status_code": 304, "duration": "0.0183 secondes", "method": "GET", "path": "/media/7_wWxL5r0.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:35,760] INFO | "GET /media/10.jpg HTTP/1.1" 304 0
+[2025-04-09 11:04:35,762] INFO | "GET /media/7_wWxL5r0.jpg HTTP/1.1" 304 0
+[2025-04-09 11:04:35,763] INFO | Fin de requï¿½te: {"status_code": 304, "duration": "0.0186 secondes", "method": "GET", "path": "/media/9_4WTKWkM.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:35,763] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/media/8.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:35,765] INFO | "GET /media/9_4WTKWkM.jpg HTTP/1.1" 304 0
+[2025-04-09 11:04:35,765] INFO | Fin de requï¿½te: {"status_code": 304, "duration": "0.0135 secondes", "method": "GET", "path": "/media/8.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:35,766] INFO | "GET /media/8.jpg HTTP/1.1" 304 0
+[2025-04-09 11:04:37,088] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:37,118] INFO | Fin de requï¿½te: {"status_code": 200, "duration": "0.0339 secondes", "method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:37,118] INFO | "GET /blog-feed/ HTTP/1.1" 200 5215
+[2025-04-09 11:04:37,163] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/media/4_tHIoXkH.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:37,164] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/media/2_IubDzHT.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:37,164] INFO | Fin de requï¿½te: {"status_code": 304, "duration": "0.0080 secondes", "method": "GET", "path": "/media/4_tHIoXkH.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:37,165] INFO | Fin de requï¿½te: {"status_code": 304, "duration": "0.0090 secondes", "method": "GET", "path": "/media/2_IubDzHT.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:37,165] INFO | "GET /media/4_tHIoXkH.jpg HTTP/1.1" 304 0
+[2025-04-09 11:04:37,167] INFO | "GET /media/2_IubDzHT.jpg HTTP/1.1" 304 0
+[2025-04-09 11:04:40,689] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/about-us/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:40,689] INFO | Fin de requï¿½te: {"status_code": 200, "duration": "0.0030 secondes", "method": "GET", "path": "/about-us/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:40,693] INFO | "GET /about-us/ HTTP/1.1" 200 4371
+[2025-04-09 11:04:43,812] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:43,826] INFO | Fin de requï¿½te: {"status_code": 200, "duration": "0.0169 secondes", "method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:43,826] INFO | "GET /blog-feed/ HTTP/1.1" 200 5215
+[2025-04-09 11:04:45,128] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/contact/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:45,132] INFO | Fin de requï¿½te: {"status_code": 200, "duration": "0.0130 secondes", "method": "GET", "path": "/contact/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:45,132] INFO | "GET /contact/ HTTP/1.1" 200 3448
+[2025-04-09 11:04:46,026] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/about-us/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:46,027] INFO | Fin de requï¿½te: {"status_code": 200, "duration": "0.0040 secondes", "method": "GET", "path": "/about-us/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:46,027] INFO | "GET /about-us/ HTTP/1.1" 200 4371
+[2025-04-09 11:04:47,027] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:47,041] INFO | Fin de requï¿½te: {"status_code": 200, "duration": "0.0187 secondes", "method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:47,041] INFO | "GET /blog-feed/ HTTP/1.1" 200 5215
+[2025-04-09 11:04:48,959] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/blog/55", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:48,972] INFO | Fin de requï¿½te: {"status_code": 200, "duration": "0.0150 secondes", "method": "GET", "path": "/blog/55", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:48,972] INFO | "GET /blog/55 HTTP/1.1" 200 3995
+[2025-04-09 11:04:52,207] INFO | Dï¿½but de requï¿½te: {"method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:52,230] INFO | Fin de requï¿½te: {"status_code": 200, "duration": "0.0244 secondes", "method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:04:52,231] INFO | "GET /blog-feed/ HTTP/1.1" 200 5215
+[2025-04-09 11:06:35,308] INFO | Watching for file changes with StatReloader
+[2025-04-09 11:06:38,852] INFO | Début de requête: {"method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:06:38,886] INFO | Fin de requête: {"status_code": 200, "duration": "0.0414 secondes", "method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:06:38,888] INFO | "GET / HTTP/1.1" 200 4694
+[2025-04-09 11:06:43,049] INFO | Début de requête: {"method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:06:43,049] INFO | Fin de requête: {"status_code": 200, "duration": "0.0158 secondes", "method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:06:43,049] INFO | "GET / HTTP/1.1" 200 4694
+[2025-04-09 11:06:46,153] INFO | Début de requête: {"method": "GET", "path": "/logout/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:06:46,176] INFO | Fin de requête: {"status_code": 302, "duration": "0.0454 secondes", "method": "GET", "path": "/logout/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:06:46,180] INFO | "GET /logout/ HTTP/1.1" 302 0
+[2025-04-09 11:06:46,190] INFO | Début de requête: {"method": "GET", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 11:06:46,233] INFO | Fin de requête: {"status_code": 200, "duration": "0.0424 secondes", "method": "GET", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 11:06:46,236] INFO | "GET /login/ HTTP/1.1" 200 2966
+[2025-04-09 11:06:50,612] INFO | Début de requête: {"method": "POST", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 11:06:51,233] INFO | Fin de requête: {"status_code": 302, "duration": "0.6204 secondes", "method": "POST", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 11:06:51,240] INFO | "POST /login/ HTTP/1.1" 302 0
+[2025-04-09 11:06:51,246] INFO | Début de requête: {"method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:06:51,248] INFO | Fin de requête: {"status_code": 200, "duration": "0.0041 secondes", "method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:06:51,248] INFO | "GET / HTTP/1.1" 200 4694
+[2025-04-09 11:06:55,760] INFO | Début de requête: {"method": "GET", "path": "/about-us/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:06:55,761] INFO | Fin de requête: {"status_code": 200, "duration": "0.0050 secondes", "method": "GET", "path": "/about-us/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:06:55,761] INFO | "GET /about-us/ HTTP/1.1" 200 4371
+[2025-04-09 11:07:36,154] INFO | Début de requête: {"method": "GET", "path": "/contact/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:36,178] INFO | Fin de requête: {"status_code": 200, "duration": "0.0262 secondes", "method": "GET", "path": "/contact/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:36,183] INFO | "GET /contact/ HTTP/1.1" 200 3448
+[2025-04-09 11:07:37,445] INFO | Début de requête: {"method": "GET", "path": "/about-us/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:37,445] INFO | Fin de requête: {"status_code": 200, "duration": "0.0093 secondes", "method": "GET", "path": "/about-us/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:37,454] INFO | "GET /about-us/ HTTP/1.1" 200 4371
+[2025-04-09 11:07:38,492] INFO | Début de requête: {"method": "GET", "path": "/contact/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:38,509] INFO | Fin de requête: {"status_code": 200, "duration": "0.0279 secondes", "method": "GET", "path": "/contact/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:38,512] INFO | "GET /contact/ HTTP/1.1" 200 3448
+[2025-04-09 11:07:40,071] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:40,174] INFO | Fin de requête: {"status_code": 200, "duration": "0.1118 secondes", "method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:40,176] INFO | "GET /blog-feed/ HTTP/1.1" 200 5215
+[2025-04-09 11:07:40,241] INFO | Début de requête: {"method": "GET", "path": "/media/4_tHIoXkH.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:40,244] INFO | Début de requête: {"method": "GET", "path": "/media/2_IubDzHT.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:40,394] INFO | Fin de requête: {"status_code": 200, "duration": "0.1706 secondes", "method": "GET", "path": "/media/4_tHIoXkH.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:40,394] INFO | Fin de requête: {"status_code": 200, "duration": "0.1569 secondes", "method": "GET", "path": "/media/2_IubDzHT.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:40,397] INFO | "GET /media/4_tHIoXkH.jpg HTTP/1.1" 200 9198
+[2025-04-09 11:07:40,397] INFO | "GET /media/2_IubDzHT.jpg HTTP/1.1" 200 19550
+[2025-04-09 11:07:40,920] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:40,981] INFO | Fin de requête: {"status_code": 200, "duration": "0.0732 secondes", "method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:40,983] INFO | "GET /photo-feed/ HTTP/1.1" 200 5740
+[2025-04-09 11:07:41,096] INFO | Début de requête: {"method": "GET", "path": "/media/6_dYfwEga.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:41,096] INFO | Début de requête: {"method": "GET", "path": "/media/8_SzeQfUh.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:41,098] INFO | Fin de requête: {"status_code": 200, "duration": "0.0065 secondes", "method": "GET", "path": "/media/6_dYfwEga.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:41,098] INFO | Fin de requête: {"status_code": 200, "duration": "0.0086 secondes", "method": "GET", "path": "/media/8_SzeQfUh.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:41,098] INFO | "GET /media/8_SzeQfUh.jpg HTTP/1.1" 200 12034
+[2025-04-09 11:07:41,098] INFO | "GET /media/6_dYfwEga.jpg HTTP/1.1" 200 12943
+[2025-04-09 11:07:41,135] INFO | Début de requête: {"method": "GET", "path": "/media/10.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:41,137] INFO | Début de requête: {"method": "GET", "path": "/media/7_wWxL5r0.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:41,139] INFO | Fin de requête: {"status_code": 200, "duration": "0.0211 secondes", "method": "GET", "path": "/media/10.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:41,141] INFO | Début de requête: {"method": "GET", "path": "/media/8.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:41,143] INFO | Fin de requête: {"status_code": 200, "duration": "0.0242 secondes", "method": "GET", "path": "/media/7_wWxL5r0.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:41,146] INFO | Début de requête: {"method": "GET", "path": "/media/9_4WTKWkM.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:41,147] INFO | "GET /media/10.jpg HTTP/1.1" 200 11109
+[2025-04-09 11:07:41,148] INFO | "GET /media/7_wWxL5r0.jpg HTTP/1.1" 200 12371
+[2025-04-09 11:07:41,149] INFO | Fin de requête: {"status_code": 200, "duration": "0.0194 secondes", "method": "GET", "path": "/media/8.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:41,150] INFO | Fin de requête: {"status_code": 200, "duration": "0.0235 secondes", "method": "GET", "path": "/media/9_4WTKWkM.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:41,152] INFO | "GET /media/9_4WTKWkM.jpg HTTP/1.1" 200 7498
+[2025-04-09 11:07:41,152] INFO | "GET /media/8.jpg HTTP/1.1" 200 12034
+[2025-04-09 11:07:42,065] INFO | Début de requête: {"method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:42,065] INFO | Fin de requête: {"status_code": 200, "duration": "0.0030 secondes", "method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:07:42,080] INFO | "GET / HTTP/1.1" 200 4694
+[2025-04-09 11:08:06,092] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:06,134] INFO | Fin de requête: {"status_code": 200, "duration": "0.0579 secondes", "method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:06,135] INFO | "GET /photo-feed/ HTTP/1.1" 200 5740
+[2025-04-09 11:08:11,160] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:11,211] INFO | Fin de requête: {"status_code": 200, "duration": "0.0742 secondes", "method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:11,214] INFO | "GET /photo-feed/ HTTP/1.1" 200 5740
+[2025-04-09 11:08:12,119] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:12,168] INFO | Fin de requête: {"status_code": 200, "duration": "0.0547 secondes", "method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:12,170] INFO | "GET /blog-feed/ HTTP/1.1" 200 5215
+[2025-04-09 11:08:15,075] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:15,112] INFO | Fin de requête: {"status_code": 200, "duration": "0.0377 secondes", "method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:15,114] INFO | "GET /blog-feed/?categorie=1 HTTP/1.1" 200 3901
+[2025-04-09 11:08:18,687] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:18,713] INFO | Fin de requête: {"status_code": 200, "duration": "0.0375 secondes", "method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:18,715] INFO | "GET /blog-feed/?categorie=2 HTTP/1.1" 200 3896
+[2025-04-09 11:08:21,864] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:21,904] INFO | Fin de requête: {"status_code": 200, "duration": "0.0536 secondes", "method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:21,904] INFO | "GET /blog-feed/?categorie= HTTP/1.1" 200 5215
+[2025-04-09 11:08:28,473] INFO | Début de requête: {"method": "GET", "path": "/blog/create", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:28,487] INFO | Fin de requête: {"status_code": 200, "duration": "0.0276 secondes", "method": "GET", "path": "/blog/create", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:28,487] INFO | "GET /blog/create HTTP/1.1" 200 6497
+[2025-04-09 11:08:28,536] INFO | Début de requête: {"method": "GET", "path": "/media/3_hUzNZwv.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:28,538] INFO | Fin de requête: {"status_code": 304, "duration": "0.0084 secondes", "method": "GET", "path": "/media/3_hUzNZwv.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:28,539] INFO | "GET /media/3_hUzNZwv.jpg HTTP/1.1" 304 0
+[2025-04-09 11:08:41,937] INFO | Début de requête: {"method": "POST", "path": "/blog/create", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:42,018] INFO | Fin de requête: {"status_code": 302, "duration": "0.0860 secondes", "method": "POST", "path": "/blog/create", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:42,021] INFO | "POST /blog/create HTTP/1.1" 302 0
+[2025-04-09 11:08:42,032] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:42,049] INFO | Fin de requête: {"status_code": 200, "duration": "0.0203 secondes", "method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:08:42,049] INFO | "GET /blog-feed/ HTTP/1.1" 200 5865
+[2025-04-09 11:09:20,365] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\views.py changed, reloading.
+[2025-04-09 11:09:21,423] INFO | Watching for file changes with StatReloader
+[2025-04-09 11:09:27,267] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\views.py changed, reloading.
+[2025-04-09 11:09:28,463] INFO | Watching for file changes with StatReloader
+[2025-04-09 11:09:31,118] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\views.py changed, reloading.
+[2025-04-09 11:09:32,124] INFO | Watching for file changes with StatReloader
+[2025-04-09 11:09:34,832] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\views.py changed, reloading.
+[2025-04-09 11:09:36,036] INFO | Watching for file changes with StatReloader
+[2025-04-09 11:09:45,930] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\views.py changed, reloading.
+[2025-04-09 11:09:47,352] INFO | Watching for file changes with StatReloader
+[2025-04-09 11:09:49,725] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\views.py changed, reloading.
+[2025-04-09 11:09:50,734] INFO | Watching for file changes with StatReloader
+[2025-04-09 11:09:52,984] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\views.py changed, reloading.
+[2025-04-09 11:09:54,186] INFO | Watching for file changes with StatReloader
+[2025-04-09 11:10:03,902] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\views.py changed, reloading.
+[2025-04-09 11:10:04,989] INFO | Watching for file changes with StatReloader
+[2025-04-09 11:10:09,756] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\views.py changed, reloading.
+[2025-04-09 11:10:11,075] INFO | Watching for file changes with StatReloader
+[2025-04-09 11:10:13,090] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:10:13,149] INFO | Fin de requête: {"status_code": 200, "duration": "0.0744 secondes", "method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:10:13,149] INFO | "GET /blog-feed/ HTTP/1.1" 200 5865
+[2025-04-09 11:10:13,322] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:10:13,338] INFO | Fin de requête: {"status_code": 200, "duration": "0.0231 secondes", "method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:10:13,338] INFO | "GET /blog-feed/ HTTP/1.1" 200 5865
+[2025-04-09 11:10:13,591] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:10:13,607] INFO | Fin de requête: {"status_code": 200, "duration": "0.0160 secondes", "method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:10:13,607] INFO | "GET /blog-feed/ HTTP/1.1" 200 5865
+[2025-04-09 11:10:20,489] INFO | Début de requête: {"method": "GET", "path": "/blog/create", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:10:20,548] INFO | Fin de requête: {"status_code": 200, "duration": "0.0774 secondes", "method": "GET", "path": "/blog/create", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:10:20,548] INFO | "GET /blog/create HTTP/1.1" 200 6497
+[2025-04-09 11:10:30,281] INFO | Début de requête: {"method": "POST", "path": "/blog/create", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:10:30,344] INFO | Fin de requête: {"status_code": 302, "duration": "0.0724 secondes", "method": "POST", "path": "/blog/create", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:10:30,352] INFO | "POST /blog/create HTTP/1.1" 302 0
+[2025-04-09 11:10:30,359] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:10:30,385] INFO | Fin de requête: {"status_code": 200, "duration": "0.0263 secondes", "method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:10:30,386] INFO | "GET /blog-feed/ HTTP/1.1" 200 6524
+[2025-04-09 11:10:38,442] INFO | Début de requête: {"method": "GET", "path": "/blog/56", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:10:38,455] INFO | Fin de requête: {"status_code": 200, "duration": "0.0190 secondes", "method": "GET", "path": "/blog/56", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:10:38,456] INFO | "GET /blog/56 HTTP/1.1" 200 3984
+[2025-04-09 11:10:47,082] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:10:47,100] INFO | Fin de requête: {"status_code": 200, "duration": "0.0239 secondes", "method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 11:10:47,101] INFO | "GET /blog-feed/ HTTP/1.1" 200 6524

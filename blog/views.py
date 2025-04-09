@@ -56,7 +56,8 @@ def blog_and_photo_upload(request):
             blog.photo = get_object_or_404(models.Photo, id=selected_photo_id, uploader=request.user)
             blog.author = request.user
             blog.save()
-
+            blog_form.save_m2m()
+            
             blog.contributors.add(request.user, through_defaults={'contribution': 'Auteur principal'})
             return redirect('blog_feed')
 
