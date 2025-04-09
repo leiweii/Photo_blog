@@ -1,0 +1,8 @@
+[2025-04-09 10:36:11,501] INFO | Watching for file changes with StatReloader
+[2025-04-09 10:36:40,456] INFO | Début de requête: {"method": "GET", "path": "/logout/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 10:36:40,505] INFO | Fin de requête: {"status_code": 302, "duration": "0.0636 secondes", "method": "GET", "path": "/logout/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 10:36:40,507] INFO | "GET /logout/ HTTP/1.1" 302 0
+[2025-04-09 10:36:40,528] INFO | Début de requête: {"method": "GET", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 10:36:40,607] INFO | Fin de requête: {"status_code": 200, "duration": "0.0791 secondes", "method": "GET", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 10:36:40,607] INFO | "GET /login/ HTTP/1.1" 200 2966
+[2025-04-09 10:36:40,653] INFO | "GET /static/style/style.css HTTP/1.1" 304 0
