@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-4">
+  <h2>🎨 Tableau de bord du Créateur</h2>
+  <p>Bienvenue {{ request.user.username }} ! Voici vos publications.</p>
+
+  <hr>
+
+  <h3>📷 Mes Photos</h3>
+  <div class="row">
+    {% for photo in photos %}
+      <div class="col-md-3 mb-3">
+        <img src="{{ photo.image.url }}" class="img-thumbnail" alt="{{ photo.caption }}">
+        <p class="mt-2">{{ photo.caption }}</p>
+        <a href="{% url 'edit_photo' photo.id %}" class="btn btn-sm btn-outline-primary">✏️ Modifier</a>
+        <form method="post" action="{% url 'delete_photo' photo.id %}" style="display:inline;">
+          {% csrf_token %}
+          <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Supprimer cette photo ?')">🗑</button>
+        </form>
+      </div>
+    {% empty %}
+      <p>Aucune photo pour le moment.</p>
+    {% endfor %}
+  </div>
+
+  <hr>
+
+  <h3>📝 Mes Blogs</h3>
+  <div class="list-group">
+    {% for blog in blogs %}
+      <div class="list-group-item">
+        <h5>{{ blog.title }}</h5>
+        <p>{{ blog.date_created|date:"d/m/Y H:i" }}</p>
+        <a href="{% url 'edit_blog' blog.id %}" class="btn btn-sm btn-outline-primary">✏️ Modifier</a>
+        <form method="post" action="{% url 'edit_blog' blog.id %}" style="display:inline;">
+          {% csrf_token %}
+          <button type="submit" name="delete_blog" class="btn btn-sm btn-outline-danger" onclick="return confirm('Supprimer ce blog ?')">🗑 Supprimer</button>
+        </form>
+      </div>
+    {% empty %}
+      <p>Aucun blog pour le moment.</p>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

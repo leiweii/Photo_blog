@@ -57,7 +57,7 @@ def blog_and_photo_upload(request):
             blog.author = request.user
             blog.save()
             blog_form.save_m2m()
-            
+
             blog.contributors.add(request.user, through_defaults={'contribution': 'Auteur principal'})
             return redirect('blog_feed')
 
@@ -68,13 +68,15 @@ def blog_and_photo_upload(request):
     return render(request, 'blog/create_blog_post.html', context=context)
 
 
+
 @login_required
 def edit_blog(request, blog_id):
     blog = get_object_or_404(models.Blog, id=blog_id)
 
-    # Seul l’auteur peut modifier ou supprimer
     if blog.author != request.user:
         raise PermissionDenied
+
+    user_photos = models.Photo.objects.filter(uploader=request.user)
 
     edit_form = forms.BlogForm(instance=blog)
     delete_form = forms.DeleteBlogForm()
@@ -82,8 +84,13 @@ def edit_blog(request, blog_id):
     if request.method == 'POST':
         if 'edit_blog' in request.POST:
             edit_form = forms.BlogForm(request.POST, instance=blog)
-            if edit_form.is_valid():
-                edit_form.save()
+            selected_photo_id = request.POST.get('photo_choice')
+
+            if edit_form.is_valid() and selected_photo_id:
+                blog = edit_form.save(commit=False)
+                blog.photo = get_object_or_404(models.Photo, id=selected_photo_id, uploader=request.user)
+                blog.save()
+                edit_form.save_m2m()
                 return redirect('view_blog', blog_id=blog.id)
 
         elif 'delete_blog' in request.POST:
@@ -96,8 +103,11 @@ def edit_blog(request, blog_id):
         'edit_form': edit_form,
         'delete_form': delete_form,
         'blog': blog,
+        'user_photos': user_photos,
     }
     return render(request, 'blog/edit_blog.html', context)
+
+
 
 @login_required
 def view_blog(request, blog_id):
@@ -185,6 +195,21 @@ def delete_photo(request, photo_id):
 
 
 @login_required
+def creator_dashboard(request):
+    if request.user.role != request.user.CREATOR:
+        raise PermissionDenied
+
+    photos = models.Photo.objects.filter(uploader=request.user)
+    blogs = models.Blog.objects.filter(author=request.user)
+
+    return render(request, 'blog/creator_dashboard.html', {
+        'photos': photos,
+        'blogs': blogs,
+    })
+
+
+
+@login_required
 def photo_feed(request):
     categorie_id = request.GET.get('categorie')
     categories = models.Categorie.objects.all()
@@ -247,6 +272,7 @@ def create_multiple_photos(request):
                     photo = form.save(commit=False)
                     photo.uploader = request.user
                     photo.save()
+                    form.save_m2m()
             return redirect('home')
     return render(request, 'blog/create_multiple_photos.html', {'formset': formset})
 
@@ -402,13 +428,13 @@ def contact_view(request):
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
 
-            full_message = f"Message de {name} <{email}>\n\n{message}"
+            full_message = f"Vous avez reçu un message de {name} <{email}>\n\n{message}"
 
             send_mail(
                 subject,
                 full_message,
                 settings.DEFAULT_FROM_EMAIL,
-                [settings.CONTACT_EMAIL],  # tu définiras ça dans settings.py
+                [settings.CONTACT_EMAIL],
             )
             messages.success(request, "Votre message a bien été envoyé.")
             return redirect('contact')

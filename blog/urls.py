@@ -9,6 +9,7 @@ urlpatterns = [
     path('comment/<int:comment_id>/edit/', views.edit_comment, name='edit_comment'),
     path('comment/<int:comment_id>/delete/', views.delete_comment, name='delete_comment'),
     path('blog/<int:blog_id>/edit/', views.edit_blog, name='edit_blog'),
+    path('creator-dashboard/', views.creator_dashboard, name='creator_dashboard'),
 
     path('admin-panel/', views.admin_panel, name='admin_panel'),
     path('admin-panel/users/', views.admin_users, name='admin_users'),

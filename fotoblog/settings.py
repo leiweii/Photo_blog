@@ -96,15 +96,15 @@ AUTH_PASSWORD_VALIDATORS = [
             'min_length': 3,
         }
     },
-    # {
-        # 'NAME': 'authentication.validators.ContainsLetterValidator',        doit contenir au moins une lettre majuscule ou minuscule.
-    # },
-    # {
-    #     'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',         ne peut pas trop ressembler à vos autres informations personnelles.
-    # },
-    # {
-    #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',         ne peut pas être un mot de passe couramment utilisé.
-    # 
+    {
+        'NAME': 'authentication.validators.ContainsLetterValidator', 
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator', 
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',     
+    },
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
@@ -168,19 +168,11 @@ EMAIL_HOST_PASSWORD = 'gfimpmiubktrryum'
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-CONTACT_EMAIL = 'shileiwei0930@gmail.com'  # email dadmin
-
-# Supprime la ligne "EMAIL_BACKEND = console" (si existante)
+CONTACT_EMAIL = 'shileiwei0930@gmail.com'  # email d'admin
 
 
 
 # logs
-
-  # 
-
-
-
-
 import os
 from pathlib import Path
 from datetime import datetime

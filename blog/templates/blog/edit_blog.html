@@ -6,17 +6,33 @@
 <form method="post">
     {% csrf_token %}
     {{ edit_form.as_p }}
+
+    <h4 class="mt-4">📷 Choisir une photo</h4>
+    <div class="row">
+        {% for photo in user_photos %}
+            <div class="col-md-3 mb-3 text-center">
+                <label style="cursor:pointer;">
+                    <input type="radio" name="photo_choice" value="{{ photo.id }}"
+                        {% if blog.photo and blog.photo.id == photo.id %}checked{% endif %}>
+                    <img src="{{ photo.image.url }}" alt="{{ photo.caption }}" class="img-thumbnail" width="200"><br>
+                    <small>{{ photo.caption }}</small>
+                </label>
+            </div>
+        {% empty %}
+            <p class="text-muted">Aucune photo trouvée. <a href="{% url 'photo_upload' %}">Uploader une photo</a></p>
+        {% endfor %}
+    </div>
+
     <button type="submit" name="edit_blog" class="btn btn-primary">Sauvegarder</button>
 </form>
 
 <hr>
 
-<h3 class="mt-4 text-danger">🗑 Supprimer ce blog</h3>
-
+<h4 class="text-danger">🗑 Supprimer le blog</h4>
 <form method="post">
     {% csrf_token %}
     {{ delete_form.as_p }}
-    <button type="submit" name="delete_blog" class="btn btn-danger" onclick="return confirm('Es-tu sûr de vouloir supprimer ce blog ?')">Supprimer</button>
+    <button type="submit" name="delete_blog" class="btn btn-danger" onclick="return confirm('Supprimer ce blog ?')">Supprimer</button>
 </form>
 
 <a href="{% url 'view_blog' blog.id %}" class="btn btn-link mt-3">⬅ Retour</a>
