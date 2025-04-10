@@ -1,9 +1,46 @@
-{% extends 'base.html' %} {% block content %}
-<div class="follow-container">
-  <h2>Suivre des photographes</h2>
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+  <h2 class="text-center mb-4">📸 Suivre des photographes</h2>
+  <p class="text-center text-muted">Cliquez sur un ou plusieurs profils pour les suivre.</p>
+
   <form method="post">
-    {{ form.as_p }} {% csrf_token %}
-    <button type="submit">Confirmer</button>
+    {% csrf_token %}
+    <div class="row">
+      {% for user in form.fields.follows.queryset %}
+        <div class="col-md-4 mb-4">
+          <input type="checkbox" name="follows" value="{{ user.id }}"
+                 id="follow-{{ user.id }}"
+                 class="d-none"
+                 {% if user in form.initial.follows %}checked{% endif %}>
+          
+          <label for="follow-{{ user.id }}" class="d-block card p-3 shadow-sm follow-card"
+                 style="cursor:pointer; transition:0.3s;">
+            <div class="text-center">
+              {% if user.profile_photo %}
+                <img src="{{ user.profile_photo.url }}" class="rounded-circle mb-2" width="80" height="80">
+              {% else %}
+                <img src="https://via.placeholder.com/80?text=Photo" class="rounded-circle mb-2" width="80" height="80">
+              {% endif %}
+              <h5 class="mb-0">{{ user.username }}</h5>
+            </div>
+          </label>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-lg mt-3">✅ Confirmer</button>
+      <a href="{% url 'home' %}" class="btn btn-outline-secondary btn-lg mt-3">⬅ Retour</a>
+    </div>
   </form>
 </div>
-{% endblock content %}
+
+<style>
+  input[type="checkbox"]:checked + label {
+    border: 2px solid #0d6efd;
+    background-color: #f0f8ff;
+    box-shadow: 0 0 10px rgba(13, 110, 253, 0.4);
+  }
+</style>
+{% endblock %}

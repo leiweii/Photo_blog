@@ -7,14 +7,14 @@
   <img src="{{ blog.photo.image.url }}" class="img-fluid mb-3" alt="{{ blog.photo.caption }}">
 {% endif %}
 
-<p><strong>Par :</strong> {{ blog.author.username }}</p>
-<p><strong>Contributeurs :</strong>
+<p><strong>Pubilé par :</strong> {{ blog.author.username }}</p>
+{% comment %} <p><strong>Contributeurs :</strong>
   {% for contributor in blog.contributors.all %}
     {{ contributor.username }}{% if not forloop.last %}, {% endif %}
   {% empty %}
     Aucun
   {% endfor %}
-</p>
+</p> {% endcomment %}
 
 <p><strong>Date :</strong> {{ blog.date_created|date:"d/m/Y H:i" }}</p>
 

@@ -2504,3 +2504,744 @@ django.template.exceptions.TemplateDoesNotExist: creator_dashboard.html
 [2025-04-09 21:59:49,984] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\fotoblog\settings.py changed, reloading.
 [2025-04-09 22:00:46,778] INFO | Watching for file changes with StatReloader
 [2025-04-09 22:29:10,496] INFO | Watching for file changes with StatReloader
+[2025-04-09 22:37:24,432] INFO | Watching for file changes with StatReloader
+[2025-04-09 22:37:27,749] INFO | Début de requête: {"method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:37:27,786] INFO | Fin de requête: {"status_code": 200, "duration": "0.0486 secondes", "method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:37:27,790] INFO | "GET / HTTP/1.1" 200 4838
+[2025-04-09 22:37:29,250] INFO | Début de requête: {"method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:37:29,250] INFO | Fin de requête: {"status_code": 200, "duration": "0.0157 secondes", "method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:37:29,250] INFO | "GET / HTTP/1.1" 200 4838
+[2025-04-09 22:37:29,504] INFO | Début de requête: {"method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:37:29,504] INFO | Fin de requête: {"status_code": 200, "duration": "0.0018 secondes", "method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:37:29,504] INFO | "GET / HTTP/1.1" 200 4838
+[2025-04-09 22:37:31,554] INFO | Début de requête: {"method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:37:31,568] INFO | Fin de requête: {"status_code": 200, "duration": "0.0140 secondes", "method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:37:31,568] INFO | "GET / HTTP/1.1" 200 4838
+[2025-04-09 22:37:32,613] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:37:32,650] INFO | Fin de requête: {"status_code": 200, "duration": "0.0459 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:37:32,653] INFO | "GET /follow-users/ HTTP/1.1" 200 3563
+[2025-04-09 22:44:01,543] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:01,588] INFO | Fin de requête: {"status_code": 200, "duration": "0.0573 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:01,590] INFO | "GET /follow-users/ HTTP/1.1" 200 5866
+[2025-04-09 22:44:01,710] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/bc1afecf439b99c0829e62141c5767d5_y2yBZ8W.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:01,712] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/bc1afecf439b99c0829e62141c5767d5_1bRN52M.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:01,811] INFO | Fin de requête: {"status_code": 200, "duration": "0.1082 secondes", "method": "GET", "path": "/media/profile_photos/bc1afecf439b99c0829e62141c5767d5_1bRN52M.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:01,812] INFO | Fin de requête: {"status_code": 200, "duration": "0.1092 secondes", "method": "GET", "path": "/media/profile_photos/bc1afecf439b99c0829e62141c5767d5_y2yBZ8W.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:01,813] INFO | "GET /media/profile_photos/bc1afecf439b99c0829e62141c5767d5_1bRN52M.jpg HTTP/1.1" 200 23464
+[2025-04-09 22:44:01,814] INFO | "GET /media/profile_photos/bc1afecf439b99c0829e62141c5767d5_y2yBZ8W.jpg HTTP/1.1" 200 23464
+[2025-04-09 22:44:02,364] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:02,378] INFO | Fin de requête: {"status_code": 200, "duration": "0.0289 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:02,385] INFO | "GET /follow-users/ HTTP/1.1" 200 5866
+[2025-04-09 22:44:02,853] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:02,871] INFO | Fin de requête: {"status_code": 200, "duration": "0.0295 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:02,877] INFO | "GET /follow-users/ HTTP/1.1" 200 5866
+[2025-04-09 22:44:03,262] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:03,266] INFO | Fin de requête: {"status_code": 200, "duration": "0.0070 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:03,266] INFO | "GET /follow-users/ HTTP/1.1" 200 5866
+[2025-04-09 22:44:03,945] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:03,968] INFO | Fin de requête: {"status_code": 200, "duration": "0.0283 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:03,970] INFO | "GET /follow-users/ HTTP/1.1" 200 5866
+[2025-04-09 22:44:04,560] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:04,576] INFO | Fin de requête: {"status_code": 200, "duration": "0.0254 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:04,578] INFO | "GET /follow-users/ HTTP/1.1" 200 5866
+[2025-04-09 22:44:05,000] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:05,002] INFO | Fin de requête: {"status_code": 200, "duration": "0.0122 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:05,018] INFO | "GET /follow-users/ HTTP/1.1" 200 5866
+[2025-04-09 22:44:05,331] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:05,336] INFO | Fin de requête: {"status_code": 200, "duration": "0.0085 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:05,341] INFO | "GET /follow-users/ HTTP/1.1" 200 5866
+[2025-04-09 22:44:05,812] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:05,819] INFO | Fin de requête: {"status_code": 200, "duration": "0.0125 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:05,820] INFO | "GET /follow-users/ HTTP/1.1" 200 5866
+[2025-04-09 22:44:06,174] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:06,195] INFO | Fin de requête: {"status_code": 200, "duration": "0.0251 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:06,198] INFO | "GET /follow-users/ HTTP/1.1" 200 5866
+[2025-04-09 22:44:10,764] INFO | Début de requête: {"method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:10,764] INFO | Fin de requête: {"status_code": 200, "duration": "0.0090 secondes", "method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:10,779] INFO | "GET / HTTP/1.1" 200 4838
+[2025-04-09 22:44:13,003] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:13,028] INFO | Fin de requête: {"status_code": 200, "duration": "0.0417 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:44:13,028] INFO | "GET /follow-users/ HTTP/1.1" 200 5866
+[2025-04-09 22:45:18,417] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:45:18,421] INFO | Fin de requête: {"status_code": 200, "duration": "0.0096 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:45:18,421] INFO | "GET /follow-users/ HTTP/1.1" 200 5866
+[2025-04-09 22:45:18,782] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:45:18,798] INFO | Fin de requête: {"status_code": 200, "duration": "0.0160 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:45:18,798] INFO | "GET /follow-users/ HTTP/1.1" 200 5866
+[2025-04-09 22:45:19,083] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:45:19,099] INFO | Fin de requête: {"status_code": 200, "duration": "0.0161 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:45:19,099] INFO | "GET /follow-users/ HTTP/1.1" 200 5866
+[2025-04-09 22:45:19,376] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:45:19,386] INFO | Fin de requête: {"status_code": 200, "duration": "0.0159 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:45:19,386] INFO | "GET /follow-users/ HTTP/1.1" 200 5866
+[2025-04-09 22:45:58,555] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\forms.py changed, reloading.
+[2025-04-09 22:45:59,757] INFO | Watching for file changes with StatReloader
+[2025-04-09 22:46:01,969] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:46:02,019] INFO | Fin de requête: {"status_code": 200, "duration": "0.0572 secondes", "method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:46:02,027] INFO | "GET /photo-feed/ HTTP/1.1" 200 6093
+[2025-04-09 22:46:02,345] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:46:02,365] INFO | Fin de requête: {"status_code": 200, "duration": "0.0247 secondes", "method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:46:02,366] INFO | "GET /photo-feed/ HTTP/1.1" 200 6093
+[2025-04-09 22:46:02,758] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:46:02,810] INFO | Fin de requête: {"status_code": 200, "duration": "0.0612 secondes", "method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:46:02,812] INFO | "GET /photo-feed/ HTTP/1.1" 200 6093
+[2025-04-09 22:46:02,989] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:46:03,009] INFO | Fin de requête: {"status_code": 200, "duration": "0.0261 secondes", "method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:46:03,010] INFO | "GET /photo-feed/ HTTP/1.1" 200 6093
+[2025-04-09 22:46:04,880] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:46:04,889] INFO | Fin de requête: {"status_code": 200, "duration": "0.0120 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:46:04,889] INFO | "GET /follow-users/ HTTP/1.1" 200 5866
+[2025-04-09 22:46:14,098] INFO | Début de requête: {"method": "POST", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:46:14,173] INFO | Fin de requête: {"status_code": 302, "duration": "0.0874 secondes", "method": "POST", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:46:14,180] INFO | "POST /follow-users/ HTTP/1.1" 302 0
+[2025-04-09 22:46:14,202] INFO | Début de requête: {"method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:46:14,214] INFO | Fin de requête: {"status_code": 200, "duration": "0.0188 secondes", "method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:46:14,215] INFO | "GET / HTTP/1.1" 200 4838
+[2025-04-09 22:46:16,807] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:46:16,818] INFO | Fin de requête: {"status_code": 200, "duration": "0.0135 secondes", "method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:46:16,824] INFO | "GET /photo-feed/ HTTP/1.1" 200 6093
+[2025-04-09 22:46:30,359] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\forms.py changed, reloading.
+[2025-04-09 22:46:31,367] INFO | Watching for file changes with StatReloader
+[2025-04-09 22:48:01,365] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:48:01,506] INFO | Fin de requête: {"status_code": 200, "duration": "0.1552 secondes", "method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:48:01,510] INFO | "GET /photo-feed/ HTTP/1.1" 200 6093
+[2025-04-09 22:48:01,609] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:48:01,620] INFO | Fin de requête: {"status_code": 200, "duration": "0.0149 secondes", "method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:48:01,620] INFO | "GET /photo-feed/ HTTP/1.1" 200 6093
+[2025-04-09 22:48:01,764] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:48:01,773] INFO | Fin de requête: {"status_code": 200, "duration": "0.0132 secondes", "method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:48:01,773] INFO | "GET /photo-feed/ HTTP/1.1" 200 6093
+[2025-04-09 22:48:04,440] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:48:04,455] INFO | Fin de requête: {"status_code": 200, "duration": "0.0167 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:48:04,456] INFO | "GET /follow-users/ HTTP/1.1" 200 6753
+[2025-04-09 22:51:54,075] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:51:54,107] INFO | Fin de requête: {"status_code": 200, "duration": "0.0413 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:51:54,109] INFO | "GET /follow-users/ HTTP/1.1" 200 6301
+[2025-04-09 22:51:54,768] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:51:54,786] INFO | Fin de requête: {"status_code": 200, "duration": "0.0320 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:51:54,786] INFO | "GET /follow-users/ HTTP/1.1" 200 6301
+[2025-04-09 22:51:55,051] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:51:55,051] INFO | Fin de requête: {"status_code": 200, "duration": "0.0000 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:51:55,051] INFO | "GET /follow-users/ HTTP/1.1" 200 6301
+[2025-04-09 22:52:20,611] INFO | Début de requête: {"method": "GET", "path": "/profile-photo/upload", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:20,634] INFO | Fin de requête: {"status_code": 200, "duration": "0.0326 secondes", "method": "GET", "path": "/profile-photo/upload", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:20,642] INFO | "GET /profile-photo/upload HTTP/1.1" 200 3331
+[2025-04-09 22:52:34,083] INFO | Début de requête: {"method": "POST", "path": "/profile-photo/upload", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:34,188] INFO | Fin de requête: {"status_code": 302, "duration": "0.1103 secondes", "method": "POST", "path": "/profile-photo/upload", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:34,188] INFO | "POST /profile-photo/upload HTTP/1.1" 302 0
+[2025-04-09 22:52:34,199] INFO | Début de requête: {"method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:34,201] INFO | Fin de requête: {"status_code": 200, "duration": "0.0056 secondes", "method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:34,202] INFO | "GET / HTTP/1.1" 200 4805
+[2025-04-09 22:52:34,234] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:34,336] INFO | Fin de requête: {"status_code": 200, "duration": "0.1053 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:34,346] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 200 543649
+[2025-04-09 22:52:41,873] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:41,881] INFO | Fin de requête: {"status_code": 200, "duration": "0.0102 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:41,883] INFO | "GET /follow-users/ HTTP/1.1" 200 6235
+[2025-04-09 22:52:41,916] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:41,917] INFO | Fin de requête: {"status_code": 304, "duration": "0.0052 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:41,917] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 304 0
+[2025-04-09 22:52:55,643] INFO | Début de requête: {"method": "POST", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:55,662] INFO | Fin de requête: {"status_code": 302, "duration": "0.0228 secondes", "method": "POST", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:55,662] INFO | "POST /follow-users/ HTTP/1.1" 302 0
+[2025-04-09 22:52:55,668] INFO | Début de requête: {"method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:55,674] INFO | Fin de requête: {"status_code": 200, "duration": "0.0058 secondes", "method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:55,675] INFO | "GET / HTTP/1.1" 200 4805
+[2025-04-09 22:52:55,709] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:55,710] INFO | Fin de requête: {"status_code": 304, "duration": "0.0050 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:55,711] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 304 0
+[2025-04-09 22:52:57,727] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:57,737] INFO | Fin de requête: {"status_code": 200, "duration": "0.0132 secondes", "method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:57,744] INFO | "GET /photo-feed/ HTTP/1.1" 200 6060
+[2025-04-09 22:52:57,773] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:57,774] INFO | Début de requête: {"method": "GET", "path": "/media/8_SzeQfUh.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:57,774] INFO | Fin de requête: {"status_code": 304, "duration": "0.0170 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:57,774] INFO | Fin de requête: {"status_code": 304, "duration": "0.0170 secondes", "method": "GET", "path": "/media/8_SzeQfUh.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:57,776] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 304 0
+[2025-04-09 22:52:57,776] INFO | "GET /media/8_SzeQfUh.jpg HTTP/1.1" 304 0
+[2025-04-09 22:52:57,807] INFO | Début de requête: {"method": "GET", "path": "/media/8.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:57,808] INFO | Fin de requête: {"status_code": 304, "duration": "0.0049 secondes", "method": "GET", "path": "/media/8.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:52:57,809] INFO | "GET /media/8.jpg HTTP/1.1" 304 0
+[2025-04-09 22:53:05,075] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:05,081] INFO | Fin de requête: {"status_code": 200, "duration": "0.0091 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:05,082] INFO | "GET /follow-users/ HTTP/1.1" 200 6235
+[2025-04-09 22:53:05,116] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:05,118] INFO | Fin de requête: {"status_code": 304, "duration": "0.0040 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:05,119] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 304 0
+[2025-04-09 22:53:09,712] INFO | Début de requête: {"method": "POST", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:09,737] INFO | Fin de requête: {"status_code": 302, "duration": "0.0283 secondes", "method": "POST", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:09,737] INFO | "POST /follow-users/ HTTP/1.1" 302 0
+[2025-04-09 22:53:09,746] INFO | Début de requête: {"method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:09,746] INFO | Fin de requête: {"status_code": 200, "duration": "0.0034 secondes", "method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:09,748] INFO | "GET / HTTP/1.1" 200 4805
+[2025-04-09 22:53:09,782] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:09,782] INFO | Fin de requête: {"status_code": 304, "duration": "0.0049 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:09,783] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 304 0
+[2025-04-09 22:53:21,498] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:21,509] INFO | Fin de requête: {"status_code": 200, "duration": "0.0138 secondes", "method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:21,509] INFO | "GET /photo-feed/ HTTP/1.1" 200 5051
+[2025-04-09 22:53:21,541] INFO | Début de requête: {"method": "GET", "path": "/media/7_hcx5OxN.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:21,542] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:21,542] INFO | Fin de requête: {"status_code": 200, "duration": "0.0053 secondes", "method": "GET", "path": "/media/7_hcx5OxN.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:21,543] INFO | Fin de requête: {"status_code": 304, "duration": "0.0075 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:21,544] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 304 0
+[2025-04-09 22:53:21,545] INFO | "GET /media/7_hcx5OxN.jpg HTTP/1.1" 200 12366
+[2025-04-09 22:53:21,574] INFO | Début de requête: {"method": "GET", "path": "/media/6_aAhV9dP.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:21,577] INFO | Début de requête: {"method": "GET", "path": "/media/Nitro_Wallpaper_5000x2813_ayY1Crv.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:21,578] INFO | Fin de requête: {"status_code": 200, "duration": "0.0101 secondes", "method": "GET", "path": "/media/6_aAhV9dP.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:21,579] INFO | Début de requête: {"method": "GET", "path": "/media/planet9_Wallpaper_5000x2813_YrIGNEM.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:21,580] INFO | Fin de requête: {"status_code": 200, "duration": "0.0099 secondes", "method": "GET", "path": "/media/Nitro_Wallpaper_5000x2813_ayY1Crv.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:21,581] INFO | "GET /media/6_aAhV9dP.jpg HTTP/1.1" 200 12931
+[2025-04-09 22:53:21,581] INFO | Fin de requête: {"status_code": 200, "duration": "0.0099 secondes", "method": "GET", "path": "/media/planet9_Wallpaper_5000x2813_YrIGNEM.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:21,584] INFO | "GET /media/planet9_Wallpaper_5000x2813_YrIGNEM.jpg HTTP/1.1" 200 30851
+[2025-04-09 22:53:21,584] INFO | "GET /media/Nitro_Wallpaper_5000x2813_ayY1Crv.jpg HTTP/1.1" 200 37295
+[2025-04-09 22:53:28,222] INFO | Début de requête: {"method": "GET", "path": "/photo/144/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:28,230] INFO | Fin de requête: {"status_code": 200, "duration": "0.0100 secondes", "method": "GET", "path": "/photo/144/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:28,230] INFO | "GET /photo/144/ HTTP/1.1" 200 3297
+[2025-04-09 22:53:28,260] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:28,261] INFO | Fin de requête: {"status_code": 304, "duration": "0.0037 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:28,261] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 304 0
+[2025-04-09 22:53:31,224] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:31,235] INFO | Fin de requête: {"status_code": 200, "duration": "0.0150 secondes", "method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:31,235] INFO | "GET /photo-feed/ HTTP/1.1" 200 5051
+[2025-04-09 22:53:32,229] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:32,296] INFO | Fin de requête: {"status_code": 200, "duration": "0.0770 secondes", "method": "GET", "path": "/blog-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:32,297] INFO | "GET /blog-feed/ HTTP/1.1" 200 5366
+[2025-04-09 22:53:34,947] INFO | Début de requête: {"method": "GET", "path": "/blog/60", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:34,990] INFO | Fin de requête: {"status_code": 200, "duration": "0.0613 secondes", "method": "GET", "path": "/blog/60", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:34,992] INFO | "GET /blog/60 HTTP/1.1" 200 4619
+[2025-04-09 22:53:35,083] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:35,083] INFO | Fin de requête: {"status_code": 304, "duration": "0.0058 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:53:35,090] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 304 0
+[2025-04-09 22:54:29,130] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:29,140] INFO | Fin de requête: {"status_code": 200, "duration": "0.0153 secondes", "method": "GET", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:29,142] INFO | "GET /follow-users/ HTTP/1.1" 200 6235
+[2025-04-09 22:54:29,191] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:29,192] INFO | Fin de requête: {"status_code": 304, "duration": "0.0078 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:29,193] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 304 0
+[2025-04-09 22:54:29,253] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/bc1afecf439b99c0829e62141c5767d5_1bRN52M.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:29,255] INFO | Fin de requête: {"status_code": 304, "duration": "0.0081 secondes", "method": "GET", "path": "/media/profile_photos/bc1afecf439b99c0829e62141c5767d5_1bRN52M.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:29,256] INFO | "GET /media/profile_photos/bc1afecf439b99c0829e62141c5767d5_1bRN52M.jpg HTTP/1.1" 304 0
+[2025-04-09 22:54:43,040] INFO | Début de requête: {"method": "POST", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:43,125] INFO | Fin de requête: {"status_code": 302, "duration": "0.0941 secondes", "method": "POST", "path": "/follow-users/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:43,132] INFO | "POST /follow-users/ HTTP/1.1" 302 0
+[2025-04-09 22:54:43,153] INFO | Début de requête: {"method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:43,159] INFO | Fin de requête: {"status_code": 200, "duration": "0.0142 secondes", "method": "GET", "path": "/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:43,160] INFO | "GET / HTTP/1.1" 200 4805
+[2025-04-09 22:54:43,205] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:43,206] INFO | Fin de requête: {"status_code": 304, "duration": "0.0065 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:43,207] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 304 0
+[2025-04-09 22:54:45,409] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:45,414] INFO | Fin de requête: {"status_code": 200, "duration": "0.0091 secondes", "method": "GET", "path": "/photo-feed/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:45,415] INFO | "GET /photo-feed/ HTTP/1.1" 200 3591
+[2025-04-09 22:54:48,379] INFO | Début de requête: {"method": "GET", "path": "/logout/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:48,385] INFO | Fin de requête: {"status_code": 302, "duration": "0.0097 secondes", "method": "GET", "path": "/logout/", "user": "leiwei", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:48,386] INFO | "GET /logout/ HTTP/1.1" 302 0
+[2025-04-09 22:54:48,390] INFO | Début de requête: {"method": "GET", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:48,396] INFO | Fin de requête: {"status_code": 200, "duration": "0.0058 secondes", "method": "GET", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:48,397] INFO | "GET /login/ HTTP/1.1" 200 2966
+[2025-04-09 22:54:54,720] INFO | Début de requête: {"method": "POST", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:55,334] INFO | Fin de requête: {"status_code": 302, "duration": "0.6139 secondes", "method": "POST", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:55,340] INFO | "POST /login/ HTTP/1.1" 302 0
+[2025-04-09 22:54:55,347] INFO | Début de requête: {"method": "GET", "path": "/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:55,349] INFO | Fin de requête: {"status_code": 200, "duration": "0.0054 secondes", "method": "GET", "path": "/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:55,351] INFO | "GET / HTTP/1.1" 200 4682
+[2025-04-09 22:54:59,300] INFO | Début de requête: {"method": "GET", "path": "/profile-photo/upload", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:59,304] INFO | Fin de requête: {"status_code": 200, "duration": "0.0078 secondes", "method": "GET", "path": "/profile-photo/upload", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:54:59,306] INFO | "GET /profile-photo/upload HTTP/1.1" 200 3011
+[2025-04-09 22:55:18,580] INFO | Début de requête: {"method": "POST", "path": "/profile-photo/upload", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:55:18,615] INFO | Fin de requête: {"status_code": 302, "duration": "0.0398 secondes", "method": "POST", "path": "/profile-photo/upload", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:55:18,615] INFO | "POST /profile-photo/upload HTTP/1.1" 302 0
+[2025-04-09 22:55:18,629] INFO | Début de requête: {"method": "GET", "path": "/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:55:18,632] INFO | Fin de requête: {"status_code": 200, "duration": "0.0080 secondes", "method": "GET", "path": "/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:55:18,633] INFO | "GET / HTTP/1.1" 200 4680
+[2025-04-09 22:55:18,663] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:55:18,663] INFO | Fin de requête: {"status_code": 200, "duration": "0.0041 secondes", "method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:55:18,677] INFO | "GET /media/profile_photos/photo_l4TSTuC.jpg HTTP/1.1" 200 797115
+[2025-04-09 22:55:22,035] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:55:22,043] INFO | Fin de requête: {"status_code": 200, "duration": "0.0104 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:55:22,044] INFO | "GET /follow-users/ HTTP/1.1" 200 6108
+[2025-04-09 22:55:22,073] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:55:22,075] INFO | Fin de requête: {"status_code": 304, "duration": "0.0092 secondes", "method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:55:22,076] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:55:22,077] INFO | "GET /media/profile_photos/photo_l4TSTuC.jpg HTTP/1.1" 304 0
+[2025-04-09 22:55:22,077] INFO | Fin de requête: {"status_code": 200, "duration": "0.0073 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:55:22,086] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 200 543649
+[2025-04-09 22:57:56,684] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\forms.py changed, reloading.
+[2025-04-09 22:57:57,988] INFO | Watching for file changes with StatReloader
+[2025-04-09 22:57:59,670] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\forms.py changed, reloading.
+[2025-04-09 22:58:00,875] INFO | Watching for file changes with StatReloader
+[2025-04-09 22:58:03,649] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\forms.py changed, reloading.
+[2025-04-09 22:58:04,879] INFO | Watching for file changes with StatReloader
+[2025-04-09 22:58:15,510] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\forms.py changed, reloading.
+[2025-04-09 22:58:16,372] INFO | Watching for file changes with StatReloader
+[2025-04-09 22:58:49,789] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\forms.py changed, reloading.
+[2025-04-09 22:58:50,904] INFO | Watching for file changes with StatReloader
+[2025-04-09 22:59:16,029] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\forms.py changed, reloading.
+[2025-04-09 22:59:17,135] INFO | Watching for file changes with StatReloader
+[2025-04-09 22:59:28,728] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:28,760] INFO | Fin de requête: {"status_code": 200, "duration": "0.0374 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:28,760] INFO | "GET /follow-users/ HTTP/1.1" 200 5417
+[2025-04-09 22:59:28,822] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:28,822] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:28,822] INFO | Fin de requête: {"status_code": 304, "duration": "0.0098 secondes", "method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:28,822] INFO | Fin de requête: {"status_code": 304, "duration": "0.0078 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:28,822] INFO | "GET /media/profile_photos/photo_l4TSTuC.jpg HTTP/1.1" 304 0
+[2025-04-09 22:59:28,822] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 304 0
+[2025-04-09 22:59:29,057] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:29,066] INFO | Fin de requête: {"status_code": 200, "duration": "0.0138 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:29,067] INFO | "GET /follow-users/ HTTP/1.1" 200 5417
+[2025-04-09 22:59:29,350] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:29,359] INFO | Fin de requête: {"status_code": 200, "duration": "0.0111 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:29,359] INFO | "GET /follow-users/ HTTP/1.1" 200 5417
+[2025-04-09 22:59:29,637] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:29,664] INFO | Fin de requête: {"status_code": 200, "duration": "0.0409 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:29,664] INFO | "GET /follow-users/ HTTP/1.1" 200 5417
+[2025-04-09 22:59:29,921] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:29,928] INFO | Fin de requête: {"status_code": 200, "duration": "0.0092 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:29,929] INFO | "GET /follow-users/ HTTP/1.1" 200 5417
+[2025-04-09 22:59:30,269] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:30,294] INFO | Fin de requête: {"status_code": 200, "duration": "0.0470 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:30,298] INFO | "GET /follow-users/ HTTP/1.1" 200 5417
+[2025-04-09 22:59:30,588] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:30,588] INFO | Fin de requête: {"status_code": 200, "duration": "0.0000 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:30,588] INFO | "GET /follow-users/ HTTP/1.1" 200 5417
+[2025-04-09 22:59:31,087] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:31,103] INFO | Fin de requête: {"status_code": 200, "duration": "0.0337 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:31,103] INFO | "GET /follow-users/ HTTP/1.1" 200 5417
+[2025-04-09 22:59:31,553] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:31,582] INFO | Fin de requête: {"status_code": 200, "duration": "0.0356 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:31,585] INFO | "GET /follow-users/ HTTP/1.1" 200 5417
+[2025-04-09 22:59:31,918] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:31,944] INFO | Fin de requête: {"status_code": 200, "duration": "0.0359 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:31,947] INFO | "GET /follow-users/ HTTP/1.1" 200 5417
+[2025-04-09 22:59:32,354] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:32,376] INFO | Fin de requête: {"status_code": 200, "duration": "0.0339 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:32,379] INFO | "GET /follow-users/ HTTP/1.1" 200 5417
+[2025-04-09 22:59:32,789] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:32,813] INFO | Fin de requête: {"status_code": 200, "duration": "0.0358 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:32,816] INFO | "GET /follow-users/ HTTP/1.1" 200 5417
+[2025-04-09 22:59:37,552] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:37,637] INFO | Fin de requête: {"status_code": 200, "duration": "0.0871 secondes", "method": "GET", "path": "/blog-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:37,638] INFO | "GET /blog-feed/ HTTP/1.1" 200 8222
+[2025-04-09 22:59:37,689] INFO | Début de requête: {"method": "GET", "path": "/media/8_SzeQfUh.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:37,693] INFO | Début de requête: {"method": "GET", "path": "/media/10.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:37,730] INFO | Début de requête: {"method": "GET", "path": "/media/4_tHIoXkH.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:37,738] INFO | Début de requête: {"method": "GET", "path": "/media/6_dYfwEga.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:37,865] INFO | Fin de requête: {"status_code": 200, "duration": "0.1807 secondes", "method": "GET", "path": "/media/10.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:37,865] INFO | "GET /media/10.jpg HTTP/1.1" 200 11109
+[2025-04-09 22:59:37,865] INFO | Fin de requête: {"status_code": 200, "duration": "0.1840 secondes", "method": "GET", "path": "/media/8_SzeQfUh.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:37,870] INFO | "GET /media/8_SzeQfUh.jpg HTTP/1.1" 200 12019
+[2025-04-09 22:59:37,899] INFO | Fin de requête: {"status_code": 200, "duration": "0.1758 secondes", "method": "GET", "path": "/media/4_tHIoXkH.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:37,900] INFO | "GET /media/4_tHIoXkH.jpg HTTP/1.1" 200 9198
+[2025-04-09 22:59:37,900] INFO | Fin de requête: {"status_code": 200, "duration": "0.1748 secondes", "method": "GET", "path": "/media/6_dYfwEga.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:37,903] INFO | "GET /media/6_dYfwEga.jpg HTTP/1.1" 200 12943
+[2025-04-09 22:59:38,683] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:38,731] INFO | Fin de requête: {"status_code": 200, "duration": "0.0589 secondes", "method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:38,733] INFO | "GET /photo-feed/ HTTP/1.1" 200 5734
+[2025-04-09 22:59:38,769] INFO | Début de requête: {"method": "GET", "path": "/media/7_wWxL5r0.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:38,769] INFO | Début de requête: {"method": "GET", "path": "/media/9_4WTKWkM.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:38,770] INFO | Fin de requête: {"status_code": 200, "duration": "0.0079 secondes", "method": "GET", "path": "/media/7_wWxL5r0.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:38,771] INFO | Fin de requête: {"status_code": 200, "duration": "0.0078 secondes", "method": "GET", "path": "/media/9_4WTKWkM.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:38,772] INFO | "GET /media/9_4WTKWkM.jpg HTTP/1.1" 200 7498
+[2025-04-09 22:59:38,773] INFO | "GET /media/7_wWxL5r0.jpg HTTP/1.1" 200 12371
+[2025-04-09 22:59:38,799] INFO | Début de requête: {"method": "GET", "path": "/media/8.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:38,800] INFO | Fin de requête: {"status_code": 200, "duration": "0.0050 secondes", "method": "GET", "path": "/media/8.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:38,802] INFO | "GET /media/8.jpg HTTP/1.1" 200 12019
+[2025-04-09 22:59:39,747] INFO | Début de requête: {"method": "GET", "path": "/creator-dashboard/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:39,771] INFO | Fin de requête: {"status_code": 200, "duration": "0.0309 secondes", "method": "GET", "path": "/creator-dashboard/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:39,776] INFO | "GET /creator-dashboard/ HTTP/1.1" 200 2897
+[2025-04-09 22:59:47,169] INFO | Début de requête: {"method": "GET", "path": "/photo/upload/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:47,198] INFO | Fin de requête: {"status_code": 200, "duration": "0.0325 secondes", "method": "GET", "path": "/photo/upload/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 22:59:47,212] INFO | "GET /photo/upload/ HTTP/1.1" 200 3804
+[2025-04-09 23:00:23,541] INFO | Début de requête: {"method": "POST", "path": "/photo/upload/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:23,698] INFO | Fin de requête: {"status_code": 302, "duration": "0.1653 secondes", "method": "POST", "path": "/photo/upload/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:23,699] INFO | "POST /photo/upload/ HTTP/1.1" 302 0
+[2025-04-09 23:00:23,705] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:23,719] INFO | Fin de requête: {"status_code": 200, "duration": "0.0160 secondes", "method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:23,719] INFO | "GET /photo-feed/ HTTP/1.1" 200 5734
+[2025-04-09 23:00:23,748] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:23,749] INFO | Fin de requête: {"status_code": 304, "duration": "0.0035 secondes", "method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:23,749] INFO | "GET /media/profile_photos/photo_l4TSTuC.jpg HTTP/1.1" 304 0
+[2025-04-09 23:00:27,287] INFO | Début de requête: {"method": "GET", "path": "/creator-dashboard/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:27,293] INFO | Fin de requête: {"status_code": 200, "duration": "0.0090 secondes", "method": "GET", "path": "/creator-dashboard/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:27,294] INFO | "GET /creator-dashboard/ HTTP/1.1" 200 3470
+[2025-04-09 23:00:27,323] INFO | Début de requête: {"method": "GET", "path": "/media/L2_8UWZg9m.webp", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:27,324] INFO | Fin de requête: {"status_code": 200, "duration": "0.0047 secondes", "method": "GET", "path": "/media/L2_8UWZg9m.webp", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:27,326] INFO | "GET /media/L2_8UWZg9m.webp HTTP/1.1" 200 32562
+[2025-04-09 23:00:30,903] INFO | Début de requête: {"method": "GET", "path": "/photo/146/edit/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:30,916] INFO | Fin de requête: {"status_code": 200, "duration": "0.0157 secondes", "method": "GET", "path": "/photo/146/edit/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:30,916] INFO | "GET /photo/146/edit/ HTTP/1.1" 200 3924
+[2025-04-09 23:00:55,278] INFO | Début de requête: {"method": "GET", "path": "/creator-dashboard/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:55,288] INFO | Fin de requête: {"status_code": 200, "duration": "0.0226 secondes", "method": "GET", "path": "/creator-dashboard/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:55,288] INFO | "GET /creator-dashboard/ HTTP/1.1" 200 3470
+[2025-04-09 23:00:55,351] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:55,353] INFO | Fin de requête: {"status_code": 304, "duration": "0.0074 secondes", "method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:55,354] INFO | Début de requête: {"method": "GET", "path": "/media/L2_8UWZg9m.webp", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:55,354] INFO | "GET /media/profile_photos/photo_l4TSTuC.jpg HTTP/1.1" 304 0
+[2025-04-09 23:00:55,355] INFO | Fin de requête: {"status_code": 304, "duration": "0.0072 secondes", "method": "GET", "path": "/media/L2_8UWZg9m.webp", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:55,356] INFO | "GET /media/L2_8UWZg9m.webp HTTP/1.1" 304 0
+[2025-04-09 23:00:56,293] INFO | Début de requête: {"method": "GET", "path": "/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:56,310] INFO | Fin de requête: {"status_code": 200, "duration": "0.0260 secondes", "method": "GET", "path": "/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:56,311] INFO | "GET / HTTP/1.1" 200 4680
+[2025-04-09 23:00:57,819] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:57,853] INFO | Fin de requête: {"status_code": 200, "duration": "0.0424 secondes", "method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:00:57,854] INFO | "GET /photo-feed/ HTTP/1.1" 200 5734
+[2025-04-09 23:01:12,795] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\forms.py changed, reloading.
+[2025-04-09 23:01:13,854] INFO | Watching for file changes with StatReloader
+[2025-04-09 23:01:15,613] INFO | C:\Users\shile\Dropbox\PC\Documents\BTS_SIO_23_24\Stage\ALLTOO\dev2\fotoblog\blog\forms.py changed, reloading.
+[2025-04-09 23:01:16,692] INFO | Watching for file changes with StatReloader
+[2025-04-09 23:01:20,724] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:20,788] INFO | Fin de requête: {"status_code": 200, "duration": "0.0662 secondes", "method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:20,790] INFO | "GET /photo-feed/ HTTP/1.1" 200 5734
+[2025-04-09 23:01:21,150] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:21,155] INFO | Fin de requête: {"status_code": 200, "duration": "0.0104 secondes", "method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:21,171] INFO | "GET /photo-feed/ HTTP/1.1" 200 5734
+[2025-04-09 23:01:21,467] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:21,484] INFO | Fin de requête: {"status_code": 200, "duration": "0.0177 secondes", "method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:21,484] INFO | "GET /photo-feed/ HTTP/1.1" 200 5734
+[2025-04-09 23:01:28,442] INFO | Début de requête: {"method": "GET", "path": "/creator-dashboard/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:28,452] INFO | Fin de requête: {"status_code": 200, "duration": "0.0164 secondes", "method": "GET", "path": "/creator-dashboard/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:28,452] INFO | "GET /creator-dashboard/ HTTP/1.1" 200 3470
+[2025-04-09 23:01:28,491] INFO | Début de requête: {"method": "GET", "path": "/media/L2_8UWZg9m.webp", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:28,493] INFO | Fin de requête: {"status_code": 304, "duration": "0.0080 secondes", "method": "GET", "path": "/media/L2_8UWZg9m.webp", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:28,494] INFO | "GET /media/L2_8UWZg9m.webp HTTP/1.1" 304 0
+[2025-04-09 23:01:31,319] INFO | Début de requête: {"method": "GET", "path": "/photo/146/edit/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:31,389] INFO | Fin de requête: {"status_code": 200, "duration": "0.0820 secondes", "method": "GET", "path": "/photo/146/edit/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:31,393] INFO | "GET /photo/146/edit/ HTTP/1.1" 200 3924
+[2025-04-09 23:01:31,478] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:31,480] INFO | Fin de requête: {"status_code": 304, "duration": "0.0087 secondes", "method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:31,481] INFO | "GET /media/profile_photos/photo_l4TSTuC.jpg HTTP/1.1" 304 0
+[2025-04-09 23:01:35,769] INFO | Début de requête: {"method": "GET", "path": "/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:35,777] INFO | Fin de requête: {"status_code": 200, "duration": "0.0123 secondes", "method": "GET", "path": "/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:35,779] INFO | "GET / HTTP/1.1" 200 4680
+[2025-04-09 23:01:37,756] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:37,802] INFO | Fin de requête: {"status_code": 200, "duration": "0.0568 secondes", "method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:01:37,804] INFO | "GET /photo-feed/ HTTP/1.1" 200 5734
+[2025-04-09 23:02:17,029] INFO | Début de requête: {"method": "GET", "path": "/creator-dashboard/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:02:17,045] INFO | Fin de requête: {"status_code": 200, "duration": "0.0302 secondes", "method": "GET", "path": "/creator-dashboard/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:02:17,045] INFO | "GET /creator-dashboard/ HTTP/1.1" 200 3470
+[2025-04-09 23:02:17,151] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:02:17,151] INFO | Début de requête: {"method": "GET", "path": "/media/L2_8UWZg9m.webp", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:02:17,156] INFO | Fin de requête: {"status_code": 304, "duration": "0.0256 secondes", "method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:02:17,156] INFO | Fin de requête: {"status_code": 304, "duration": "0.0199 secondes", "method": "GET", "path": "/media/L2_8UWZg9m.webp", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:02:17,160] INFO | "GET /media/profile_photos/photo_l4TSTuC.jpg HTTP/1.1" 304 0
+[2025-04-09 23:02:17,163] INFO | "GET /media/L2_8UWZg9m.webp HTTP/1.1" 304 0
+[2025-04-09 23:02:20,682] INFO | Début de requête: {"method": "GET", "path": "/blog/create", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:02:20,722] INFO | Fin de requête: {"status_code": 200, "duration": "0.0646 secondes", "method": "GET", "path": "/blog/create", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:02:20,726] INFO | "GET /blog/create HTTP/1.1" 200 4313
+[2025-04-09 23:03:20,245] INFO | Début de requête: {"method": "POST", "path": "/blog/create", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:20,282] INFO | Fin de requête: {"status_code": 302, "duration": "0.0434 secondes", "method": "POST", "path": "/blog/create", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:20,283] INFO | "POST /blog/create HTTP/1.1" 302 0
+[2025-04-09 23:03:20,292] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:20,354] INFO | Fin de requête: {"status_code": 200, "duration": "0.0649 secondes", "method": "GET", "path": "/blog-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:20,354] INFO | "GET /blog-feed/ HTTP/1.1" 200 8222
+[2025-04-09 23:03:20,396] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:20,397] INFO | Fin de requête: {"status_code": 304, "duration": "0.0075 secondes", "method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:20,397] INFO | "GET /media/profile_photos/photo_l4TSTuC.jpg HTTP/1.1" 304 0
+[2025-04-09 23:03:22,344] INFO | Début de requête: {"method": "GET", "path": "/photo/upload/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:22,352] INFO | Fin de requête: {"status_code": 200, "duration": "0.0107 secondes", "method": "GET", "path": "/photo/upload/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:22,353] INFO | "GET /photo/upload/ HTTP/1.1" 200 3804
+[2025-04-09 23:03:36,414] INFO | Début de requête: {"method": "GET", "path": "/photo/upload/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:36,422] INFO | Fin de requête: {"status_code": 200, "duration": "0.0119 secondes", "method": "GET", "path": "/photo/upload/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:36,422] INFO | "GET /photo/upload/ HTTP/1.1" 200 3804
+[2025-04-09 23:03:39,519] INFO | Début de requête: {"method": "GET", "path": "/creator-dashboard/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:39,525] INFO | Fin de requête: {"status_code": 200, "duration": "0.0100 secondes", "method": "GET", "path": "/creator-dashboard/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:39,526] INFO | "GET /creator-dashboard/ HTTP/1.1" 200 4018
+[2025-04-09 23:03:39,555] INFO | Début de requête: {"method": "GET", "path": "/media/L2_8UWZg9m.webp", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:39,556] INFO | Fin de requête: {"status_code": 304, "duration": "0.0101 secondes", "method": "GET", "path": "/media/L2_8UWZg9m.webp", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:39,557] INFO | "GET /media/L2_8UWZg9m.webp HTTP/1.1" 304 0
+[2025-04-09 23:03:41,713] INFO | Début de requête: {"method": "GET", "path": "/photo/146/edit/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:41,723] INFO | Fin de requête: {"status_code": 200, "duration": "0.0123 secondes", "method": "GET", "path": "/photo/146/edit/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:41,723] INFO | "GET /photo/146/edit/ HTTP/1.1" 200 3924
+[2025-04-09 23:03:52,715] INFO | Début de requête: {"method": "POST", "path": "/photo/146/edit/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:52,793] INFO | Fin de requête: {"status_code": 302, "duration": "0.0809 secondes", "method": "POST", "path": "/photo/146/edit/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:52,794] INFO | "POST /photo/146/edit/ HTTP/1.1" 302 0
+[2025-04-09 23:03:52,800] INFO | Début de requête: {"method": "GET", "path": "/photo/146/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:52,810] INFO | Fin de requête: {"status_code": 200, "duration": "0.0130 secondes", "method": "GET", "path": "/photo/146/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:52,811] INFO | "GET /photo/146/ HTTP/1.1" 200 3456
+[2025-04-09 23:03:52,844] INFO | Début de requête: {"method": "GET", "path": "/media/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:52,934] INFO | Fin de requête: {"status_code": 200, "duration": "0.0928 secondes", "method": "GET", "path": "/media/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:52,935] INFO | "GET /media/unnamed.jpg HTTP/1.1" 200 5782
+[2025-04-09 23:03:55,411] INFO | Début de requête: {"method": "GET", "path": "/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:55,415] INFO | Fin de requête: {"status_code": 200, "duration": "0.0062 secondes", "method": "GET", "path": "/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:55,416] INFO | "GET / HTTP/1.1" 200 4680
+[2025-04-09 23:03:56,898] INFO | Début de requête: {"method": "GET", "path": "/creator-dashboard/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:56,904] INFO | Fin de requête: {"status_code": 200, "duration": "0.0090 secondes", "method": "GET", "path": "/creator-dashboard/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:56,905] INFO | "GET /creator-dashboard/ HTTP/1.1" 200 4014
+[2025-04-09 23:03:56,932] INFO | Début de requête: {"method": "GET", "path": "/media/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:56,935] INFO | Fin de requête: {"status_code": 304, "duration": "0.0044 secondes", "method": "GET", "path": "/media/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:56,935] INFO | "GET /media/unnamed.jpg HTTP/1.1" 304 0
+[2025-04-09 23:03:59,483] INFO | Début de requête: {"method": "GET", "path": "/photo/146/edit/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:59,497] INFO | Fin de requête: {"status_code": 200, "duration": "0.0166 secondes", "method": "GET", "path": "/photo/146/edit/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:03:59,497] INFO | "GET /photo/146/edit/ HTTP/1.1" 200 3916
+[2025-04-09 23:04:02,850] INFO | Début de requête: {"method": "GET", "path": "/creator-dashboard/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:02,857] INFO | Fin de requête: {"status_code": 200, "duration": "0.0100 secondes", "method": "GET", "path": "/creator-dashboard/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:02,858] INFO | "GET /creator-dashboard/ HTTP/1.1" 200 4014
+[2025-04-09 23:04:02,888] INFO | Début de requête: {"method": "GET", "path": "/media/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:02,889] INFO | Fin de requête: {"status_code": 304, "duration": "0.0048 secondes", "method": "GET", "path": "/media/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:02,889] INFO | "GET /media/unnamed.jpg HTTP/1.1" 304 0
+[2025-04-09 23:04:04,387] INFO | Début de requête: {"method": "GET", "path": "/blog/61/edit/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:04,402] INFO | Fin de requête: {"status_code": 200, "duration": "0.0184 secondes", "method": "GET", "path": "/blog/61/edit/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:04,403] INFO | "GET /blog/61/edit/ HTTP/1.1" 200 5275
+[2025-04-09 23:04:04,430] INFO | Début de requête: {"method": "GET", "path": "/media/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:04,431] INFO | Fin de requête: {"status_code": 304, "duration": "0.0045 secondes", "method": "GET", "path": "/media/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:04,432] INFO | "GET /media/unnamed.jpg HTTP/1.1" 304 0
+[2025-04-09 23:04:09,495] INFO | Début de requête: {"method": "POST", "path": "/blog/61/edit/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:09,512] INFO | Fin de requête: {"status_code": 302, "duration": "0.0201 secondes", "method": "POST", "path": "/blog/61/edit/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:09,512] INFO | "POST /blog/61/edit/ HTTP/1.1" 302 0
+[2025-04-09 23:04:09,518] INFO | Début de requête: {"method": "GET", "path": "/blog/61", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:09,533] INFO | Fin de requête: {"status_code": 200, "duration": "0.0154 secondes", "method": "GET", "path": "/blog/61", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:09,533] INFO | "GET /blog/61 HTTP/1.1" 200 4248
+[2025-04-09 23:04:09,574] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:09,576] INFO | Fin de requête: {"status_code": 304, "duration": "0.0079 secondes", "method": "GET", "path": "/media/profile_photos/photo_l4TSTuC.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:09,576] INFO | Début de requête: {"method": "GET", "path": "/media/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:09,577] INFO | "GET /media/profile_photos/photo_l4TSTuC.jpg HTTP/1.1" 304 0
+[2025-04-09 23:04:09,578] INFO | Fin de requête: {"status_code": 304, "duration": "0.0091 secondes", "method": "GET", "path": "/media/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:09,579] INFO | "GET /media/unnamed.jpg HTTP/1.1" 304 0
+[2025-04-09 23:04:12,472] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:12,484] INFO | Fin de requête: {"status_code": 200, "duration": "0.0142 secondes", "method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:12,484] INFO | "GET /photo-feed/ HTTP/1.1" 200 5734
+[2025-04-09 23:04:14,673] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:14,692] INFO | Fin de requête: {"status_code": 200, "duration": "0.0223 secondes", "method": "GET", "path": "/blog-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:14,692] INFO | "GET /blog-feed/ HTTP/1.1" 200 8222
+[2025-04-09 23:04:19,628] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:19,636] INFO | Fin de requête: {"status_code": 200, "duration": "0.0118 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:19,636] INFO | "GET /follow-users/ HTTP/1.1" 200 6108
+[2025-04-09 23:04:19,670] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:19,670] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/bc1afecf439b99c0829e62141c5767d5_y2yBZ8W.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:19,671] INFO | Fin de requête: {"status_code": 304, "duration": "0.0075 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:19,672] INFO | Fin de requête: {"status_code": 200, "duration": "0.0070 secondes", "method": "GET", "path": "/media/profile_photos/bc1afecf439b99c0829e62141c5767d5_y2yBZ8W.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:19,673] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 304 0
+[2025-04-09 23:04:19,674] INFO | "GET /media/profile_photos/bc1afecf439b99c0829e62141c5767d5_y2yBZ8W.jpg HTTP/1.1" 200 23464
+[2025-04-09 23:04:19,710] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/bc1afecf439b99c0829e62141c5767d5_1bRN52M.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:19,711] INFO | Fin de requête: {"status_code": 200, "duration": "0.0050 secondes", "method": "GET", "path": "/media/profile_photos/bc1afecf439b99c0829e62141c5767d5_1bRN52M.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:19,713] INFO | "GET /media/profile_photos/bc1afecf439b99c0829e62141c5767d5_1bRN52M.jpg HTTP/1.1" 200 23464
+[2025-04-09 23:04:24,743] INFO | Début de requête: {"method": "POST", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:24,775] INFO | Fin de requête: {"status_code": 302, "duration": "0.0336 secondes", "method": "POST", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:24,775] INFO | "POST /follow-users/ HTTP/1.1" 302 0
+[2025-04-09 23:04:24,782] INFO | Début de requête: {"method": "GET", "path": "/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:24,788] INFO | Fin de requête: {"status_code": 200, "duration": "0.0129 secondes", "method": "GET", "path": "/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:24,788] INFO | "GET / HTTP/1.1" 200 4680
+[2025-04-09 23:04:30,654] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:30,670] INFO | Fin de requête: {"status_code": 200, "duration": "0.0185 secondes", "method": "GET", "path": "/photo-feed/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:30,670] INFO | "GET /photo-feed/ HTTP/1.1" 200 5785
+[2025-04-09 23:04:30,697] INFO | Début de requête: {"method": "GET", "path": "/media/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:30,697] INFO | Fin de requête: {"status_code": 304, "duration": "0.0143 secondes", "method": "GET", "path": "/media/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:30,698] INFO | "GET /media/unnamed.jpg HTTP/1.1" 304 0
+[2025-04-09 23:04:40,217] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:40,225] INFO | Fin de requête: {"status_code": 200, "duration": "0.0107 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:40,226] INFO | "GET /follow-users/ HTTP/1.1" 200 6115
+[2025-04-09 23:04:46,785] INFO | Début de requête: {"method": "GET", "path": "/profile-photo/upload", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:46,790] INFO | Fin de requête: {"status_code": 200, "duration": "0.0080 secondes", "method": "GET", "path": "/profile-photo/upload", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:46,791] INFO | "GET /profile-photo/upload HTTP/1.1" 200 3119
+[2025-04-09 23:04:54,733] INFO | Début de requête: {"method": "POST", "path": "/profile-photo/upload", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:54,751] INFO | Fin de requête: {"status_code": 302, "duration": "0.0233 secondes", "method": "POST", "path": "/profile-photo/upload", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:54,752] INFO | "POST /profile-photo/upload HTTP/1.1" 302 0
+[2025-04-09 23:04:54,762] INFO | Début de requête: {"method": "GET", "path": "/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:54,766] INFO | Fin de requête: {"status_code": 200, "duration": "0.0105 secondes", "method": "GET", "path": "/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:54,767] INFO | "GET / HTTP/1.1" 200 4674
+[2025-04-09 23:04:54,805] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:54,806] INFO | Fin de requête: {"status_code": 200, "duration": "0.0059 secondes", "method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:54,808] INFO | "GET /media/profile_photos/unnamed.jpg HTTP/1.1" 200 11471
+[2025-04-09 23:04:57,362] INFO | Début de requête: {"method": "GET", "path": "/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:57,368] INFO | Fin de requête: {"status_code": 200, "duration": "0.0095 secondes", "method": "GET", "path": "/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:57,369] INFO | "GET / HTTP/1.1" 200 4674
+[2025-04-09 23:04:57,397] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:57,398] INFO | Fin de requête: {"status_code": 304, "duration": "0.0055 secondes", "method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:57,399] INFO | "GET /media/profile_photos/unnamed.jpg HTTP/1.1" 304 0
+[2025-04-09 23:04:58,405] INFO | Début de requête: {"method": "GET", "path": "/profile-photo/upload", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:58,409] INFO | Fin de requête: {"status_code": 200, "duration": "0.0070 secondes", "method": "GET", "path": "/profile-photo/upload", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:58,410] INFO | "GET /profile-photo/upload HTTP/1.1" 200 3101
+[2025-04-09 23:04:58,438] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:58,438] INFO | Fin de requête: {"status_code": 304, "duration": "0.0042 secondes", "method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:04:58,439] INFO | "GET /media/profile_photos/unnamed.jpg HTTP/1.1" 304 0
+[2025-04-09 23:05:00,955] INFO | Début de requête: {"method": "GET", "path": "/photo/upload-multiple/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:05:00,981] INFO | Fin de requête: {"status_code": 200, "duration": "0.0305 secondes", "method": "GET", "path": "/photo/upload-multiple/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:05:00,981] INFO | "GET /photo/upload-multiple/ HTTP/1.1" 200 8871
+[2025-04-09 23:05:01,011] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:05:01,012] INFO | Fin de requête: {"status_code": 304, "duration": "0.0043 secondes", "method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:05:01,013] INFO | "GET /media/profile_photos/unnamed.jpg HTTP/1.1" 304 0
+[2025-04-09 23:05:03,649] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:05:03,657] INFO | Fin de requête: {"status_code": 200, "duration": "0.0126 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:05:03,657] INFO | "GET /follow-users/ HTTP/1.1" 200 6103
+[2025-04-09 23:05:03,687] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:05:03,688] INFO | Fin de requête: {"status_code": 304, "duration": "0.0047 secondes", "method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:05:03,688] INFO | "GET /media/profile_photos/unnamed.jpg HTTP/1.1" 304 0
+[2025-04-09 23:07:02,770] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:02,800] INFO | Fin de requête: {"status_code": 200, "duration": "0.0418 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:02,800] INFO | "GET /follow-users/ HTTP/1.1" 200 6103
+[2025-04-09 23:07:02,852] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:02,852] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:02,854] INFO | Fin de requête: {"status_code": 304, "duration": "0.0078 secondes", "method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:02,854] INFO | Fin de requête: {"status_code": 304, "duration": "0.0078 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:02,854] INFO | "GET /media/profile_photos/unnamed.jpg HTTP/1.1" 304 0
+[2025-04-09 23:07:02,854] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 304 0
+[2025-04-09 23:07:02,879] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/bc1afecf439b99c0829e62141c5767d5_1bRN52M.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:02,879] INFO | Fin de requête: {"status_code": 304, "duration": "0.0000 secondes", "method": "GET", "path": "/media/profile_photos/bc1afecf439b99c0829e62141c5767d5_1bRN52M.jpg", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:02,879] INFO | "GET /media/profile_photos/bc1afecf439b99c0829e62141c5767d5_1bRN52M.jpg HTTP/1.1" 304 0
+[2025-04-09 23:07:02,990] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:02,990] INFO | Fin de requête: {"status_code": 200, "duration": "0.0020 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:02,990] INFO | "GET /follow-users/ HTTP/1.1" 200 6103
+[2025-04-09 23:07:03,255] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:03,275] INFO | Fin de requête: {"status_code": 200, "duration": "0.0299 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:03,275] INFO | "GET /follow-users/ HTTP/1.1" 200 6103
+[2025-04-09 23:07:03,499] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:03,499] INFO | Fin de requête: {"status_code": 200, "duration": "0.0178 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:03,513] INFO | "GET /follow-users/ HTTP/1.1" 200 6103
+[2025-04-09 23:07:03,733] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:03,749] INFO | Fin de requête: {"status_code": 200, "duration": "0.0159 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:03,749] INFO | "GET /follow-users/ HTTP/1.1" 200 6103
+[2025-04-09 23:07:03,971] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:03,989] INFO | Fin de requête: {"status_code": 200, "duration": "0.0212 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:03,991] INFO | "GET /follow-users/ HTTP/1.1" 200 6103
+[2025-04-09 23:07:04,170] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:04,183] INFO | Fin de requête: {"status_code": 200, "duration": "0.0124 secondes", "method": "GET", "path": "/follow-users/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:04,183] INFO | "GET /follow-users/ HTTP/1.1" 200 6103
+[2025-04-09 23:07:06,985] INFO | Début de requête: {"method": "GET", "path": "/logout/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:07,009] INFO | Fin de requête: {"status_code": 302, "duration": "0.0314 secondes", "method": "GET", "path": "/logout/", "user": "Laurent", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:07,015] INFO | "GET /logout/ HTTP/1.1" 302 0
+[2025-04-09 23:07:07,028] INFO | Début de requête: {"method": "GET", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:07,060] INFO | Fin de requête: {"status_code": 200, "duration": "0.0326 secondes", "method": "GET", "path": "/login/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:07,061] INFO | "GET /login/ HTTP/1.1" 200 2966
+[2025-04-09 23:07:09,350] INFO | Début de requête: {"method": "GET", "path": "/signup/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:09,375] INFO | Fin de requête: {"status_code": 200, "duration": "0.0249 secondes", "method": "GET", "path": "/signup/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 23:07:09,375] INFO | "GET /signup/ HTTP/1.1" 200 4718
+[2025-04-09 23:08:02,719] INFO | Début de requête: {"method": "POST", "path": "/signup/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:03,356] INFO | Fin de requête: {"status_code": 302, "duration": "0.6364 secondes", "method": "POST", "path": "/signup/", "user": "AnonymousUser", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:03,363] INFO | "POST /signup/ HTTP/1.1" 302 0
+[2025-04-09 23:08:03,370] INFO | Début de requête: {"method": "GET", "path": "/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:03,375] INFO | Fin de requête: {"status_code": 200, "duration": "0.0075 secondes", "method": "GET", "path": "/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:03,375] INFO | "GET / HTTP/1.1" 200 4680
+[2025-04-09 23:08:06,652] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:06,664] INFO | Fin de requête: {"status_code": 200, "duration": "0.0114 secondes", "method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:06,664] INFO | "GET /follow-users/ HTTP/1.1" 200 6768
+[2025-04-09 23:08:06,707] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:06,708] INFO | Fin de requête: {"status_code": 304, "duration": "0.0053 secondes", "method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:06,709] INFO | "GET /media/profile_photos/unnamed.jpg HTTP/1.1" 304 0
+[2025-04-09 23:08:32,795] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:32,810] INFO | Fin de requête: {"status_code": 200, "duration": "0.0152 secondes", "method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:32,810] INFO | "GET /follow-users/ HTTP/1.1" 200 6431
+[2025-04-09 23:08:32,845] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:32,845] INFO | Fin de requête: {"status_code": 304, "duration": "0.0030 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:32,845] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:32,845] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 304 0
+[2025-04-09 23:08:32,845] INFO | Fin de requête: {"status_code": 304, "duration": "0.0000 secondes", "method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:32,845] INFO | "GET /media/profile_photos/unnamed.jpg HTTP/1.1" 304 0
+[2025-04-09 23:08:33,191] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:33,209] INFO | Fin de requête: {"status_code": 200, "duration": "0.0263 secondes", "method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:33,210] INFO | "GET /follow-users/ HTTP/1.1" 200 6431
+[2025-04-09 23:08:33,403] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:33,412] INFO | Fin de requête: {"status_code": 200, "duration": "0.0131 secondes", "method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:33,414] INFO | "GET /follow-users/ HTTP/1.1" 200 6431
+[2025-04-09 23:08:33,651] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:33,659] INFO | Fin de requête: {"status_code": 200, "duration": "0.0112 secondes", "method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:33,660] INFO | "GET /follow-users/ HTTP/1.1" 200 6431
+[2025-04-09 23:08:33,893] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:33,908] INFO | Fin de requête: {"status_code": 200, "duration": "0.0151 secondes", "method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:33,908] INFO | "GET /follow-users/ HTTP/1.1" 200 6431
+[2025-04-09 23:08:34,165] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:34,174] INFO | Fin de requête: {"status_code": 200, "duration": "0.0173 secondes", "method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:34,176] INFO | "GET /follow-users/ HTTP/1.1" 200 6431
+[2025-04-09 23:08:34,437] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:34,445] INFO | Fin de requête: {"status_code": 200, "duration": "0.0127 secondes", "method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:34,446] INFO | "GET /follow-users/ HTTP/1.1" 200 6431
+[2025-04-09 23:08:34,746] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:34,766] INFO | Fin de requête: {"status_code": 200, "duration": "0.0319 secondes", "method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:34,766] INFO | "GET /follow-users/ HTTP/1.1" 200 6431
+[2025-04-09 23:08:55,163] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:55,189] INFO | Fin de requête: {"status_code": 200, "duration": "0.0350 secondes", "method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:55,189] INFO | "GET /follow-users/ HTTP/1.1" 200 6431
+[2025-04-09 23:08:55,274] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:55,274] INFO | Fin de requête: {"status_code": 304, "duration": "0.0105 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:55,281] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 304 0
+[2025-04-09 23:08:55,370] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:55,371] INFO | Fin de requête: {"status_code": 304, "duration": "0.0060 secondes", "method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:55,372] INFO | "GET /media/profile_photos/unnamed.jpg HTTP/1.1" 304 0
+[2025-04-09 23:08:55,479] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:55,488] INFO | Fin de requête: {"status_code": 200, "duration": "0.0127 secondes", "method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:55,488] INFO | "GET /follow-users/ HTTP/1.1" 200 6431
+[2025-04-09 23:08:55,788] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:55,805] INFO | Fin de requête: {"status_code": 200, "duration": "0.0177 secondes", "method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:55,805] INFO | "GET /follow-users/ HTTP/1.1" 200 6431
+[2025-04-09 23:08:56,034] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:56,042] INFO | Fin de requête: {"status_code": 200, "duration": "0.0103 secondes", "method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:08:56,042] INFO | "GET /follow-users/ HTTP/1.1" 200 6431
+[2025-04-09 23:14:08,011] INFO | Début de requête: {"method": "GET", "path": "/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:08,026] INFO | Fin de requête: {"status_code": 200, "duration": "0.0299 secondes", "method": "GET", "path": "/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:08,030] INFO | "GET / HTTP/1.1" 200 4680
+[2025-04-09 23:14:09,050] INFO | Début de requête: {"method": "GET", "path": "/creator-dashboard/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:09,085] INFO | Fin de requête: {"status_code": 200, "duration": "0.0393 secondes", "method": "GET", "path": "/creator-dashboard/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:09,087] INFO | "GET /creator-dashboard/ HTTP/1.1" 200 2895
+[2025-04-09 23:14:09,880] INFO | Début de requête: {"method": "GET", "path": "/creator-dashboard/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:09,891] INFO | Fin de requête: {"status_code": 200, "duration": "0.0123 secondes", "method": "GET", "path": "/creator-dashboard/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:09,892] INFO | "GET /creator-dashboard/ HTTP/1.1" 200 2895
+[2025-04-09 23:14:10,874] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:10,907] INFO | Fin de requête: {"status_code": 200, "duration": "0.0493 secondes", "method": "GET", "path": "/photo-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:10,907] INFO | "GET /photo-feed/ HTTP/1.1" 200 3466
+[2025-04-09 23:14:12,006] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:12,022] INFO | Fin de requête: {"status_code": 200, "duration": "0.0352 secondes", "method": "GET", "path": "/blog-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:12,024] INFO | "GET /blog-feed/ HTTP/1.1" 200 3463
+[2025-04-09 23:14:13,835] INFO | Début de requête: {"method": "GET", "path": "/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:13,851] INFO | Fin de requête: {"status_code": 200, "duration": "0.0267 secondes", "method": "GET", "path": "/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:13,854] INFO | "GET / HTTP/1.1" 200 4680
+[2025-04-09 23:14:15,522] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:15,538] INFO | Fin de requête: {"status_code": 200, "duration": "0.0154 secondes", "method": "GET", "path": "/photo-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:15,539] INFO | "GET /photo-feed/ HTTP/1.1" 200 3466
+[2025-04-09 23:14:17,521] INFO | Début de requête: {"method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:17,528] INFO | Fin de requête: {"status_code": 200, "duration": "0.0090 secondes", "method": "GET", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:17,529] INFO | "GET /follow-users/ HTTP/1.1" 200 6431
+[2025-04-09 23:14:17,550] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:17,550] INFO | Fin de requête: {"status_code": 304, "duration": "0.0017 secondes", "method": "GET", "path": "/media/profile_photos/photo22.jpg", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:17,555] INFO | "GET /media/profile_photos/photo22.jpg HTTP/1.1" 304 0
+[2025-04-09 23:14:17,558] INFO | Début de requête: {"method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:17,559] INFO | Fin de requête: {"status_code": 304, "duration": "0.0047 secondes", "method": "GET", "path": "/media/profile_photos/unnamed.jpg", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:17,559] INFO | "GET /media/profile_photos/unnamed.jpg HTTP/1.1" 304 0
+[2025-04-09 23:14:21,657] INFO | Début de requête: {"method": "POST", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:21,718] INFO | Fin de requête: {"status_code": 302, "duration": "0.0685 secondes", "method": "POST", "path": "/follow-users/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:21,720] INFO | "POST /follow-users/ HTTP/1.1" 302 0
+[2025-04-09 23:14:21,734] INFO | Début de requête: {"method": "GET", "path": "/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:21,739] INFO | Fin de requête: {"status_code": 200, "duration": "0.0123 secondes", "method": "GET", "path": "/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:21,739] INFO | "GET / HTTP/1.1" 200 4680
+[2025-04-09 23:14:24,099] INFO | Début de requête: {"method": "GET", "path": "/creator-dashboard/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:24,105] INFO | Fin de requête: {"status_code": 200, "duration": "0.0093 secondes", "method": "GET", "path": "/creator-dashboard/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:24,106] INFO | "GET /creator-dashboard/ HTTP/1.1" 200 2895
+[2025-04-09 23:14:25,696] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:25,703] INFO | Fin de requête: {"status_code": 200, "duration": "0.0102 secondes", "method": "GET", "path": "/photo-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:25,703] INFO | "GET /photo-feed/ HTTP/1.1" 200 3776
+[2025-04-09 23:14:25,734] INFO | Début de requête: {"method": "GET", "path": "/media/unnamed.jpg", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:25,734] INFO | Fin de requête: {"status_code": 200, "duration": "0.0063 secondes", "method": "GET", "path": "/media/unnamed.jpg", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:25,735] INFO | "GET /media/unnamed.jpg HTTP/1.1" 200 5782
+[2025-04-09 23:14:29,645] INFO | Début de requête: {"method": "GET", "path": "/photo/146/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:29,656] INFO | Fin de requête: {"status_code": 200, "duration": "0.0137 secondes", "method": "GET", "path": "/photo/146/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:29,656] INFO | "GET /photo/146/ HTTP/1.1" 200 3174
+[2025-04-09 23:14:33,292] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:33,301] INFO | Fin de requête: {"status_code": 200, "duration": "0.0119 secondes", "method": "GET", "path": "/blog-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:33,301] INFO | "GET /blog-feed/ HTTP/1.1" 200 4245
+[2025-04-09 23:14:40,955] INFO | Début de requête: {"method": "GET", "path": "/blog/61", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:40,970] INFO | Fin de requête: {"status_code": 200, "duration": "0.0176 secondes", "method": "GET", "path": "/blog/61", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:14:40,970] INFO | "GET /blog/61 HTTP/1.1" 200 3845
+[2025-04-09 23:15:04,982] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:15:05,005] INFO | Fin de requête: {"status_code": 200, "duration": "0.0399 secondes", "method": "GET", "path": "/photo-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:15:05,005] INFO | "GET /photo-feed/ HTTP/1.1" 200 3776
+[2025-04-09 23:15:06,243] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:15:06,292] INFO | Fin de requête: {"status_code": 200, "duration": "0.0545 secondes", "method": "GET", "path": "/blog-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:15:06,295] INFO | "GET /blog-feed/ HTTP/1.1" 200 4245
+[2025-04-09 23:15:13,430] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:15:13,452] INFO | Fin de requête: {"status_code": 200, "duration": "0.0281 secondes", "method": "GET", "path": "/photo-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:15:13,452] INFO | "GET /photo-feed/ HTTP/1.1" 200 3776
+[2025-04-09 23:15:16,451] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:15:16,486] INFO | Fin de requête: {"status_code": 200, "duration": "0.0443 secondes", "method": "GET", "path": "/blog-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:15:16,489] INFO | "GET /blog-feed/ HTTP/1.1" 200 4245
+[2025-04-09 23:15:17,377] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:15:17,406] INFO | Fin de requête: {"status_code": 200, "duration": "0.0403 secondes", "method": "GET", "path": "/photo-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:15:17,406] INFO | "GET /photo-feed/ HTTP/1.1" 200 3776
+[2025-04-09 23:15:23,552] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:15:23,569] INFO | Fin de requête: {"status_code": 200, "duration": "0.0254 secondes", "method": "GET", "path": "/photo-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:15:23,569] INFO | "GET /photo-feed/ HTTP/1.1" 200 3776
+[2025-04-09 23:15:24,604] INFO | Début de requête: {"method": "GET", "path": "/blog-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:15:24,642] INFO | Fin de requête: {"status_code": 200, "duration": "0.0487 secondes", "method": "GET", "path": "/blog-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:15:24,644] INFO | "GET /blog-feed/ HTTP/1.1" 200 4245
+[2025-04-09 23:15:26,134] INFO | Début de requête: {"method": "GET", "path": "/photo-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:15:26,146] INFO | Fin de requête: {"status_code": 200, "duration": "0.0180 secondes", "method": "GET", "path": "/photo-feed/", "user": "Madou", "ip_address": "127.0.0.1"}
+[2025-04-09 23:15:26,147] INFO | "GET /photo-feed/ HTTP/1.1" 200 3776
